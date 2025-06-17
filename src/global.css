@@ -1,0 +1,208 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* ARMADOR */
+
+  /* --color-primario: #c3dfa7;
+  --color-secundario: #a0c878;
+  --color-hamburguesa: #a0c878; */
+  --bg: #f0f7d5;
+  --color: black;
+  --font: 'Brush Script', cursive;
+  --font-size-base: 22px;
+  --footer: #282e38;
+
+  /* ENLACES */
+  --a-color: #fd8975;
+  --a-hover: #fd8975;
+  --a-decoration: none;
+  --a-font-weight: 800;
+
+  /* LINEAS */
+  --color-divisor: #a28af5;
+  --color-divisor-seccion: #d4af37;
+
+  /* BODY */
+  background-color: var(--bg);
+  color: var(--color);
+  font-family: var(--font);
+  font-size: var(--font-size-base, 16px);
+
+  /* EFECTOS*/
+  --color-shadow: 4px 4px 4px black;
+}
+
+/* .bg-card {
+  box-shadow: 0px 0px 40px 15px rgba(194, 236, 205, 0.5);
+  border-style: dashed !important;
+  background-color: #fff;
+  border-color: #c3dfa7;
+  --color-shadow: 4px 4px 4px black;
+} */
+
+.bg-verde {
+  background-color: var(--bg);
+}
+
+.divider-centered {
+  width: 70%;
+  margin: 1rem auto;
+  border-color: var(--color-divisor);
+  opacity: 0.5;
+}
+
+.centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.fondo-imagen {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background-image: url('https://placehold.co/450x800');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* 
+.bg-foto {
+  background-color: var(--fondo-foto);
+} */
+
+/* img {
+  object-fit: cover;
+} */
+
+/* SOMBRA */
+.decoration-sombra-red {
+  text-shadow: 2px 2px red;
+}
+.decoration-sombra-blue {
+  text-shadow: 2px 2px blue;
+}
+.decoration-sombra-green {
+  text-shadow: 2px 2px green;
+}
+.decoration-sombra-yellow {
+  text-shadow: 2px 2px yellow;
+}
+.decoration-sombra-black {
+  text-shadow: 2px 2px black;
+}
+.decoration-sombra-white {
+  text-shadow: 2px 2px white;
+}
+
+/* SOMBRA DIFUSA */
+.decoration-sombraDifusa-red {
+  text-shadow: 0px 0px 3px red, 0px 0px 6px red, 0px 0px 9px red;
+}
+
+.decoration-sombraDifusa-blue {
+  text-shadow: 0px 0px 3px blue, 0px 0px 6px blue, 0px 0px 9px blue;
+}
+
+.decoration-sombraDifusa-green {
+  text-shadow: 0px 0px 3px green, 0px 0px 6px green, 0px 0px 9px green;
+}
+
+.decoration-sombraDifusa-yellow {
+  text-shadow: 0px 0px 3px yellow, 0px 0px 6px yellow, 0px 0px 9px yellow;
+}
+
+.decoration-sombraDifusa-black {
+  text-shadow: 0px 0px 3px black, 0px 0px 6px black, 0px 0px 9px black;
+}
+
+.decoration-sombraDifusa-white {
+  text-shadow: 0px 0px 3px white, 0px 0px 6px white, 0px 0px 9px white;
+}
+
+/* CONTORNO */
+.decoration-contorno-red {
+  color: white;
+  text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+}
+.decoration-contorno-blue {
+  color: white;
+  text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue,
+    1px 1px 0 blue;
+}
+.decoration-contorno-green {
+  color: white;
+  text-shadow: -1px -1px 0 green, 1px -1px 0 green, -1px 1px 0 green,
+    1px 1px 0 green;
+}
+.decoration-contorno-yellow {
+  color: white;
+  text-shadow: -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow,
+    1px 1px 0 yellow;
+}
+.decoration-contorno-black {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.decoration-contorno-white {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+/* RESALTADO */
+.decoration-resaltado-red {
+  background-color: red;
+  color: white;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.decoration-resaltado-blue {
+  background-color: blue;
+  color: white;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.decoration-resaltado-green {
+  background-color: green;
+  color: white;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.decoration-resaltado-yellow {
+  background-color: yellow;
+  color: black;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.decoration-resaltado-black {
+  background-color: black;
+  color: white;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.decoration-resaltado-white {
+  background-color: white;
+  color: black;
+  padding: 0 4px;
+  border-radius: 4px;
+}
