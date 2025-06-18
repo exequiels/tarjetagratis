@@ -6,7 +6,6 @@ export type CardFormData = {
   /* Inputs */
   nombre: string
   cuantos: string
-  frase: string
   cuando: string
   horario: string
   direccion: string
@@ -14,7 +13,6 @@ export type CardFormData = {
   /* Colores */
   nombreColor?: string
   cuantosColor?: string
-  fraseColor?: string
   cuandoColor?: string
   horarioColor?: string
   direccionColor?: string
@@ -22,7 +20,6 @@ export type CardFormData = {
   /* Decoraciones */
   nombreDecoration?: string
   cuantosDecoration?: string
-  fraseDecoration?: string
   cuandoDecoration?: string
   horarioDecoration?: string
   direccionDecoration?: string
@@ -30,7 +27,6 @@ export type CardFormData = {
   /* Tamaños */
   nombreSize?: string
   cuantosSize?: string
-  fraseSize?: string
   cuandoSize?: string
   horarioSize?: string
   direccionSize?: string

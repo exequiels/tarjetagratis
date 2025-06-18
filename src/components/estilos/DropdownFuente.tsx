@@ -10,7 +10,6 @@ const DropdownFuente = ({ value, onChange }: Props) => {
     { label: 'Lucida Console', value: '"Lucida Console", monospace' },
     { label: 'Tahoma', value: 'Tahoma, sans-serif' },
     { label: 'Trebuchet MS', value: '"Trebuchet MS", sans-serif' },
-    { label: 'Brush Script MT', value: '"Brush Script MT", cursive' },
     { label: 'Comic Sans MS', value: '"Comic Sans MS", cursive, sans-serif' },
     { label: 'Palatino Linotype', value: '"Palatino Linotype", serif' },
     { label: 'Impact', value: 'Impact, sans-serif' },

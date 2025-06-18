@@ -54,7 +54,7 @@ const DropdownColor = ({ value, onChange }: Props) => {
   ]
 
   return (
-    <div className="gap-2 mt-2 p-3 bg-verde border-round-lg">
+    <div className="gap-2 p-3 bg-verde border-round-lg">
       <div className="">
         <label className="text-lg">Color: </label>
         <Dropdown

@@ -65,6 +65,15 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               onChange={handleInputChange}
               className="w-full"
               placeholder={opcion.placeholder}
+              maxLength={
+                opcion.id === 'nombre'
+                  ? 30
+                  : opcion.id === 'cuantos'
+                  ? 10
+                  : opcion.id === 'direccion'
+                  ? 100
+                  : 25
+              }
             />
             <Button
               className="p-3 bg-green-200"
@@ -77,7 +86,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                 ops.current[i] = el
               }}
             >
-              <div className="mt-2 flex flex-column xs:flex-row">
+              <div className="flex flex-column xs:flex-row">
                 <DropdownColor
                   value={
                     (formData[
@@ -99,6 +108,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                   }
                 />
                 <DropdownSize
+                  fieldId={opcion.id}
                   value={
                     (formData[
                       `${opcion.id}Size` as keyof CardFormData

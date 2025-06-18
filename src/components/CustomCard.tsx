@@ -69,11 +69,11 @@ const CustomCard = ({
         <div className="w-full" style={{ flexBasis: '5%' }}></div>
 
         <div className="w-full flex flex-row flex-1">
-          <div style={{ flexBasis: '10%', flexShrink: 0, flexGrow: 0 }}></div>
+          <div className="flex-shrink-1" style={{ flexBasis: '10%' }}></div>
 
           <div
-            className="flex-1 w-full centrado"
-            style={{ flexBasis: '80%', flexShrink: 0, flexGrow: 0 }}
+            className="flex-1 flex-shrink-1 w-full centrado"
+            style={{ flexBasis: '80%' }}
           >
             {/* Nombre */}
             <div
@@ -82,15 +82,15 @@ const CustomCard = ({
               )}`}
               style={{ flexBasis: '35%', flexShrink: 0, flexGrow: 0 }}
             >
-              <span
+              <h2
                 className={getClasses(
                   nombreColor ?? '',
                   nombreDecoration ?? '',
                   nombreSize ?? ''
                 )}
               >
-                <h2>{nombre || '[Nombre]'}</h2>
-              </span>
+                {nombre || '[Nombre]'}
+              </h2>
             </div>
 
             {/* Cuantos */}
@@ -106,40 +106,44 @@ const CustomCard = ({
               }`}
               style={{ flexBasis: '35%', flexShrink: 0, flexGrow: 0 }}
             >
-              <div className={`col-6 flex ${cuantosAlinear}`}>
-                <span
+              <div
+                className={`col-6 flex ${cuantosAlinear} justify-content-center`}
+              >
+                <h2
                   className={getClasses(
                     cuantosColor ?? '',
                     cuantosDecoration ?? '',
                     cuantosSize ?? ''
                   )}
                 >
-                  <h2>{cuantos || '[Cuantos cumple?]'}</h2>
-                </span>
+                  {cuantos || '[Cuantos cumple?]'}
+                </h2>
               </div>
 
               {/* Cuando/Horario */}
-              <div className={`col-6 flex ${cuandoAlinear}`}>
+              <div
+                className={`col-6 flex ${cuandoAlinear} justify-content-center`}
+              >
                 <div>
-                  <span
+                  <h2
                     className={getClasses(
                       cuandoColor ?? '',
                       cuandoDecoration ?? '',
                       cuandoSize ?? ''
                     )}
                   >
-                    <h2>{cuando || '[Cuando]'}</h2>
-                  </span>
+                    {cuando || '[Cuando]'}
+                  </h2>
 
-                  <span
+                  <h2
                     className={getClasses(
                       horarioColor ?? '',
                       horarioDecoration ?? '',
                       horarioSize ?? ''
                     )}
                   >
-                    <h2>{horario || '[Horario]'}</h2>
-                  </span>
+                    {horario || '[Horario]'}
+                  </h2>
                 </div>
               </div>
             </div>
@@ -156,20 +160,20 @@ const CustomCard = ({
               style={{ flexBasis: '30%', flexShrink: 0, flexGrow: 0 }}
             >
               <div>
-                <span
+                <h2
                   className={getClasses(
                     direccionColor ?? '',
                     direccionDecoration ?? '',
                     direccionSize ?? ''
                   )}
                 >
-                  <h2>{direccion || '[Dirección]'}</h2>
-                </span>
+                  {direccion || '[Dirección]'}
+                </h2>
               </div>
             </div>
           </div>
 
-          <div style={{ flexBasis: '10%', flexShrink: 0, flexGrow: 0 }}></div>
+          <div className="flex-shrink-1" style={{ flexBasis: '10%' }}></div>
         </div>
 
         <div className="w-full" style={{ flexBasis: '5%' }}></div>

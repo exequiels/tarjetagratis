@@ -1,15 +1,24 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { Props } from '../../types/Props'
 
-const DropdownSize = ({ value, onChange }: Props) => {
-  const sizeOptions = [
-    { label: 'Pequeña', value: 'text-sm' },
-    { label: 'Normal', value: 'text-base' },
-    { label: 'Grande', value: 'text-2xl' },
-    { label: 'Muy Grande', value: 'text-4xl' },
+type DropdownSizeProps = Props & {
+  fieldId: string
+}
+
+const DropdownSize = ({ value, onChange, fieldId }: DropdownSizeProps) => {
+  const baseOptions = [
+    { label: 'Pequeña', value: 'text-xl' },
+    { label: 'Normal', value: 'text-2xl' },
+    { label: 'Grande', value: 'text-4xl' },
     { label: 'Enorme', value: 'text-6xl' },
-    { label: 'Max', value: 'text-8xl' },
   ]
+
+  const extraOption = { label: 'Max', value: 'text-8xl' }
+
+  const sizeOptions =
+    fieldId === 'nombre' || fieldId === 'cuantos'
+      ? [...baseOptions, extraOption]
+      : baseOptions
 
   return (
     <div className="flex justify-content-between align-items-center mt-2 p-3 bg-verde border-round-lg">

@@ -6,13 +6,13 @@ import type { CardFormData } from '../types/CardFormData'
 const CardLayout = () => {
   const [formData, setFormData] = useState<CardFormData>({
     /* Globales */
-    fondo: 'https://placehold.co/450x800?',
+    fondo: 'https://placehold.co/450x800/D8D8D8/D8D8D8?text=',
     fuente: 'Arial, sans-serif',
 
     /* Inputs */
     nombre: '',
     cuantos: '',
-    frase: '',
+
     cuando: '',
     horario: '',
     direccion: '',
@@ -20,7 +20,6 @@ const CardLayout = () => {
     /* Colores */
     nombreColor: 'text-gray-900',
     cuantosColor: 'text-gray-900',
-    fraseColor: 'text-gray-900',
     cuandoColor: 'text-gray-900',
     horarioColor: 'text-gray-900',
     direccionColor: 'text-gray-900',
@@ -28,18 +27,16 @@ const CardLayout = () => {
     /* Decoraciones */
     nombreDecoration: '',
     cuantosDecoration: '',
-    fraseDecoration: '',
     cuandoDecoration: '',
     horarioDecoration: '',
     direccionDecoration: '',
 
     /* Tamaños */
-    nombreSize: 'text-4xl md:text-5xl lg:text-6xl',
-    cuantosSize: 'text-base',
-    fraseSize: 'text-base',
-    cuandoSize: 'text-base',
-    horarioSize: 'text-base',
-    direccionSize: 'text-base',
+    nombreSize: 'text-xl',
+    cuantosSize: 'text-xl',
+    cuandoSize: 'text-xl',
+    horarioSize: 'text-xl',
+    direccionSize: 'text-xl',
 
     /* Orden */
     nombreOrden: 'flex-order-0',

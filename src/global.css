@@ -11,10 +11,6 @@ p {
 
 body {
   /* ARMADOR */
-
-  /* --color-primario: #c3dfa7;
-  --color-secundario: #a0c878;
-  --color-hamburguesa: #a0c878; */
   --bg: #f0f7d5;
   --color: black;
   --font: 'Brush Script', cursive;
@@ -40,14 +36,6 @@ body {
   /* EFECTOS*/
   --color-shadow: 4px 4px 4px black;
 }
-
-/* .bg-card {
-  box-shadow: 0px 0px 40px 15px rgba(194, 236, 205, 0.5);
-  border-style: dashed !important;
-  background-color: #fff;
-  border-color: #c3dfa7;
-  --color-shadow: 4px 4px 4px black;
-} */
 
 .bg-verde {
   background-color: var(--bg);
@@ -83,15 +71,6 @@ body {
   border-radius: 15px;
   overflow: hidden;
 }
-
-/* 
-.bg-foto {
-  background-color: var(--fondo-foto);
-} */
-
-/* img {
-  object-fit: cover;
-} */
 
 /* SOMBRA */
 .decoration-sombra-red {
@@ -173,36 +152,30 @@ body {
 .decoration-resaltado-red {
   background-color: red;
   color: white;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
 }
 .decoration-resaltado-blue {
   background-color: blue;
   color: white;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
 }
 .decoration-resaltado-green {
   background-color: green;
   color: white;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
 }
 .decoration-resaltado-yellow {
   background-color: yellow;
   color: black;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
 }
 .decoration-resaltado-black {
   background-color: black;
   color: white;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 4px;
 }
 .decoration-resaltado-white {
   background-color: white;
   color: black;
-  padding: 0 4px;
-  border-radius: 4px;
+  padding: 4px 40px;
 }
