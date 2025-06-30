@@ -45,7 +45,7 @@ const CardLayout = () => {
     cuantosAnimar: '',
     cuandoAnimar: '',
     horarioAnimar: '',
-    direccionAnimar: '',
+    direccionAnimar: 'animate__animated animate__rubberBand',
 
     /* Orden */
     nombreOrden: 'flex-order-0',
@@ -81,7 +81,7 @@ const CardLayout = () => {
     <div className="flex justify-content-center p-4">
       <div className="card flex justify-content-center border-1 border-dashed border-round-lg block md:hidden">
         <Sidebar
-          className="bg-verde"
+          className="bg-verde border-1 border-dashed"
           visible={visible}
           onHide={() => setVisible(false)}
           blockScroll

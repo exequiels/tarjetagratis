@@ -6,6 +6,7 @@ import { PrimeReactProvider } from 'primereact/api'
 import CardLayout from './components/CardLayout'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import 'animate.css'
 
 function App() {
   const value = {

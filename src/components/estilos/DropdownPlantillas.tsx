@@ -47,7 +47,7 @@ const plantillas = [
       cuantosAnimar: '',
       cuandoAnimar: '',
       horarioAnimar: '',
-      direccionAnimar: '',
+      direccionAnimar: 'animate__animated animate__rubberBand',
 
       /* Orden */
       nombreOrden: 'flex-order-0',
@@ -153,8 +153,8 @@ const plantillas = [
       direccionSize: 'text-2xl',
 
       /* Animaciones */
-      nombreAnimar: 'animate__heartBeat',
-      cuantosAnimar: '',
+      nombreAnimar: 'animate__animated animate__heartBeat',
+      cuantosAnimar: 'animate__animated animate__fadeInLeft',
       cuandoAnimar: '',
       horarioAnimar: '',
       direccionAnimar: '',

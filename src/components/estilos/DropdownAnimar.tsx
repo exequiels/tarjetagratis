@@ -1,7 +1,12 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { Props } from '../../types/Props'
 
-const DropdownAnimar = ({ value, onChange }: Props) => {
+type DropdownAnimarProps = Props & {
+  fieldId: string
+}
+
+const DropdownAnimar = ({ fieldId, value, onChange }: DropdownAnimarProps) => {
+  console.log('DropdownAnimar render:', fieldId, 'value:', value)
   const animarOptions = [
     { label: 'Ninguna', value: '' },
     { label: 'Aparecer', value: 'animate__animated animate__fadeIn' },

@@ -93,6 +93,7 @@ const CustomCard = ({
       >
         {fondo.endsWith('.mp4') ? (
           <video
+            key={fondo}
             autoPlay
             muted
             loop
@@ -211,9 +212,9 @@ const CustomCard = ({
                 </div>
               </div>
 
-              {/* Donde/Dirección */}
+              {/* Dirección */}
               <div
-                className={`flex ${direccionAlinear} ${
+                className={`flex  w-full ${direccionAlinear} justify-content-center ${
                   nombreOrden === 'flex-order-0'
                     ? 'flex-order-2'
                     : nombreOrden === 'flex-order-1'
@@ -222,18 +223,16 @@ const CustomCard = ({
                 }`}
                 style={{ flexBasis: '30%', flexShrink: 0, flexGrow: 0 }}
               >
-                <div>
-                  <span
-                    className={getClasses(
-                      direccionColor ?? '',
-                      direccionDecoration ?? '',
-                      direccionSize ?? '',
-                      direccionAnimar ?? ''
-                    )}
-                  >
-                    {direccion || ''}
-                  </span>
-                </div>
+                <span
+                  className={getClasses(
+                    direccionColor ?? '',
+                    direccionDecoration ?? '',
+                    direccionSize ?? '',
+                    direccionAnimar ?? ''
+                  )}
+                >
+                  {direccion || ''}
+                </span>
               </div>
             </div>
 

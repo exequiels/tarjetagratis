@@ -148,6 +148,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                   }
                 />
                 <DropdownAnimar
+                  fieldId={opcion.id}
                   value={
                     (formData[
                       `${opcion.id}Animar` as keyof CardFormData
