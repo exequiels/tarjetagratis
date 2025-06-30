@@ -17,7 +17,34 @@ const colorBases = [
   { label: 'Amarillo', value: 'yellow' },
   { label: 'Negro', value: 'black' },
   { label: 'Blanco', value: 'white' },
+  { label: 'Amarillo Suave', value: 'yellowsoft' },
+  { label: 'Menta', value: 'mint' },
+  { label: 'Rosa Pastel', value: 'pinkpastel' },
+  { label: 'Celeste Suave', value: 'lightblue' },
+  { label: 'Durazno', value: 'peach' },
+  { label: 'Beige', value: 'beige' },
+  { label: 'Amarillo Pastel', value: 'pastelyellow' },
+  { label: 'Verde Claro', value: 'lightgreen' },
+  { label: 'Naranja Pastel', value: 'peachorange' },
 ]
+
+const colorMap: Record<string, string> = {
+  red: 'red',
+  blue: 'blue',
+  green: 'green',
+  yellow: 'yellow',
+  black: 'black',
+  white: 'white',
+  yellowsoft: '#FBD160',
+  mint: '#A3D2CA',
+  pinkpastel: '#FFC9DE',
+  lightblue: '#B5EAEA',
+  peach: '#FFDAC1',
+  beige: '#E6E2D3',
+  pastelyellow: '#FFE066',
+  lightgreen: '#C1E1C1',
+  peachorange: '#FFD6A5',
+}
 
 const DropdownDecoration = ({ value, onChange }: Props) => {
   const [type, setType] = useState(() => value?.split('-')[1] || '')
@@ -41,10 +68,7 @@ const DropdownDecoration = ({ value, onChange }: Props) => {
       <label className="text-lg">Decoración:</label>
       <Dropdown
         value={type}
-        options={decorationTypes.map((d) => ({
-          label: d.label,
-          value: d.value,
-        }))}
+        options={decorationTypes}
         onChange={(e) => setType(e.value)}
         placeholder="Tipo"
       />
@@ -54,6 +78,24 @@ const DropdownDecoration = ({ value, onChange }: Props) => {
           options={colorBases}
           onChange={(e) => setColor(e.value)}
           placeholder="Color"
+          itemTemplate={(option) => (
+            <div
+              style={{
+                backgroundColor:
+                  type === 'resaltado'
+                    ? colorMap[option.value] || option.value
+                    : 'transparent',
+                color:
+                  type === 'resaltado'
+                    ? '#333'
+                    : colorMap[option.value] || option.value,
+                padding: '2px 6px',
+                borderRadius: '6px',
+              }}
+            >
+              {option.label}
+            </div>
+          )}
         />
       )}
     </div>

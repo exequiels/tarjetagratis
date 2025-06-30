@@ -39,5 +39,6 @@ export type CardFormData = {
   nombreAlinear?: string
   cuantosAlinear?: string
   cuandoAlinear?: string
+  horarioAlinear?: string
   direccionAlinear?: string
 }

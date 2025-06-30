@@ -12,6 +12,7 @@ import DropdownAlinear from './estilos/DropdownAlinear'
 import { OverlayPanel } from 'primereact/overlaypanel'
 import { Button } from 'primereact/button'
 import { useCallback, useRef } from 'react'
+import DropdownPlantillas from './estilos/DropdownPlantillas'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -55,6 +56,28 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
 
   return (
     <>
+      <div className="mt-4 p-3 bg-white border-round-lg">
+        <DropdownPlantillas
+          value={formData}
+          onChange={(selectedPlantilla) => setFormData(selectedPlantilla)}
+        />
+        <div className="mt-4">
+          <DropdownFondo
+            value={formData.fondo || ''}
+            onChange={(nuevoFondo: string) =>
+              setFormData({ ...formData, fondo: nuevoFondo })
+            }
+          />
+        </div>
+        <div className="mt-4">
+          <DropdownFuente
+            value={formData.fuente || ''}
+            onChange={(nuevaFuente) =>
+              setFormData({ ...formData, fuente: nuevaFuente })
+            }
+          />
+        </div>
+      </div>
       {opcionesArmador.map((opcion, i) => (
         <div className="mt-4" key={opcion.id}>
           <label htmlFor={opcion.id}>{opcion.label}</label>
@@ -78,7 +101,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
             <Button
               className="p-3 bg-green-200"
               type="button"
-              icon="pi pi-ellipsis-h"
+              icon="pi pi-angle-down"
               onClick={(e) => ops.current[i]?.toggle(e)}
             />
             <OverlayPanel
@@ -121,9 +144,13 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               </div>
               {(opcion.id === 'nombre' ||
                 opcion.id === 'cuantos' ||
-                ['nombre', 'cuantos', 'cuando', 'direccion'].includes(
-                  opcion.id
-                )) && (
+                [
+                  'nombre',
+                  'cuantos',
+                  'cuando',
+                  'horario',
+                  'direccion',
+                ].includes(opcion.id)) && (
                 <div className="mt-2 p-3 bg-verde border-round-lg">
                   {opcion.id === 'nombre' && (
                     <DropdownNombreOrden
@@ -149,9 +176,13 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                       }
                     />
                   )}
-                  {['nombre', 'cuantos', 'cuando', 'direccion'].includes(
-                    opcion.id
-                  ) && (
+                  {[
+                    'nombre',
+                    'cuantos',
+                    'cuando',
+                    'horario',
+                    'direccion',
+                  ].includes(opcion.id) && (
                     <DropdownAlinear
                       value={
                         (formData[
@@ -169,24 +200,6 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
           </div>
         </div>
       ))}
-      <div className="mt-4 p-3 bg-white border-round-lg">
-        <div>
-          <DropdownFondo
-            value={formData.fondo || ''}
-            onChange={(nuevoFondo: string) =>
-              setFormData({ ...formData, fondo: nuevoFondo })
-            }
-          />
-        </div>
-        <div className="mt-3">
-          <DropdownFuente
-            value={formData.fuente || ''}
-            onChange={(nuevaFuente) =>
-              setFormData({ ...formData, fuente: nuevaFuente })
-            }
-          />
-        </div>
-      </div>
     </>
   )
 }

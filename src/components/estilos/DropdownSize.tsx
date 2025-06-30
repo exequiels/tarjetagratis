@@ -7,17 +7,26 @@ type DropdownSizeProps = Props & {
 
 const DropdownSize = ({ value, onChange, fieldId }: DropdownSizeProps) => {
   const baseOptions = [
-    { label: 'Pequeña', value: 'text-xl' },
+    { label: 'Compacto', value: 'text-xl' },
     { label: 'Normal', value: 'text-2xl' },
     { label: 'Grande', value: 'text-4xl' },
-    { label: 'Enorme', value: 'text-6xl' },
+    { label: 'Gigante', value: 'text-6xl' },
   ]
 
-  const extraOption = { label: 'Max', value: 'text-8xl' }
+  const extraOption = [
+    { label: 'Bestial', value: 'text-7xl' },
+    { label: 'Demencial', value: 'text-8xl' },
+    { label: 'Colosal', value: 'text-10xl' },
+    { label: 'Épico', value: 'text-12xl' },
+  ]
+
+  const legendariaOption = [{ label: 'Legendaria', value: 'text-18xl' }]
 
   const sizeOptions =
-    fieldId === 'nombre' || fieldId === 'cuantos'
-      ? [...baseOptions, extraOption]
+    fieldId === 'cuantos'
+      ? [...baseOptions, ...extraOption, ...legendariaOption]
+      : fieldId === 'nombre'
+      ? [...baseOptions, ...extraOption]
       : baseOptions
 
   return (

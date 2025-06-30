@@ -6,7 +6,7 @@ const DropdownFondo = ({ value, onChange }: Props) => {
   return (
     <div>
       <div>
-        <label htmlFor="fondo">Imagen de Fondo</label>
+        <label htmlFor="fondo">Imagen de Fondo:</label>
       </div>
       <Dropdown
         id="fondo"
@@ -18,7 +18,7 @@ const DropdownFondo = ({ value, onChange }: Props) => {
         emptyFilterMessage="No hay resultados para esa busqueda"
         value={value}
         options={fondos}
-        className="w-full"
+        className="w-full mt-2"
         onChange={(e) => onChange(e.value)}
       />
     </div>

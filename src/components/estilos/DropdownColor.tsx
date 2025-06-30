@@ -71,6 +71,25 @@ const DropdownColor = ({ value, onChange }: Props) => {
             options={tones.map((t) => ({ label: t, value: t }))}
             onChange={(e) => setTone(e.value)}
             placeholder="Tono"
+            itemTemplate={(option) => (
+              <div
+                style={{
+                  backgroundColor: `var(--${colorBase}-${option.value})`,
+                  color: [
+                    'yellow',
+                    'yellow-300',
+                    'yellow-400',
+                    'yellow-500',
+                  ].includes(`${colorBase}-${option.value}`)
+                    ? '#333'
+                    : '#fff',
+                  padding: '2px 6px',
+                  borderRadius: '6px',
+                }}
+              >
+                {option.label}
+              </div>
+            )}
           />
         </div>
       </div>

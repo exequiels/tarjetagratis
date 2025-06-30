@@ -1,0 +1,268 @@
+/* SOMBRA */
+.decoration-sombra-red {
+  text-shadow: 0.125rem 0.125rem red;
+}
+.decoration-sombra-blue {
+  text-shadow: 0.125rem 0.125rem blue;
+}
+.decoration-sombra-green {
+  text-shadow: 0.125rem 0.125rem green;
+}
+.decoration-sombra-yellow {
+  text-shadow: 0.125rem 0.125rem yellow;
+}
+.decoration-sombra-black {
+  text-shadow: 0.125rem 0.125rem black;
+}
+.decoration-sombra-white {
+  text-shadow: 0.125rem 0.125rem white;
+}
+.decoration-sombra-yellowsoft {
+  text-shadow: 0.125rem 0.125rem #fbd160;
+}
+.decoration-sombra-mint {
+  text-shadow: 0.125rem 0.125rem #a3d2ca;
+}
+.decoration-sombra-pinkpastel {
+  text-shadow: 0.125rem 0.125rem #ffc9de;
+}
+.decoration-sombra-lightblue {
+  text-shadow: 0.125rem 0.125rem #b5eaea;
+}
+.decoration-sombra-peach {
+  text-shadow: 0.125rem 0.125rem #ffdac1;
+}
+.decoration-sombra-beige {
+  text-shadow: 0.125rem 0.125rem #e6e2d3;
+}
+.decoration-sombra-pastelyellow {
+  text-shadow: 0.125rem 0.125rem #ffe066;
+}
+.decoration-sombra-lightgreen {
+  text-shadow: 0.125rem 0.125rem #c1e1c1;
+}
+.decoration-sombra-peachorange {
+  text-shadow: 0.125rem 0.125rem #ffd6a5;
+}
+
+/* SOMBRA DIFUSA */
+.decoration-sombraDifusa-red {
+  text-shadow: 0 0 0.188rem red, 0 0 0.375rem red, 0 0 0.563rem red;
+}
+
+.decoration-sombraDifusa-blue {
+  text-shadow: 0 0 0.188rem blue, 0 0 0.375rem blue, 0 0 0.563rem blue;
+}
+
+.decoration-sombraDifusa-green {
+  text-shadow: 0 0 0.188rem green, 0 0 0.375rem green, 0 0 0.563rem green;
+}
+
+.decoration-sombraDifusa-yellow {
+  text-shadow: 0 0 0.188rem yellow, 0 0 0.375rem yellow, 0 0 0.563rem yellow;
+}
+
+.decoration-sombraDifusa-black {
+  text-shadow: 0 0 0.188rem black, 0 0 0.375rem black, 0 0 0.563rem black;
+}
+.decoration-sombraDifusa-white {
+  text-shadow: 0 0 0.188rem white, 0 0 0.375rem white, 0 0 0.563rem white;
+}
+.decoration-sombraDifusa-yellowsoft {
+  text-shadow: 0 0 0.188rem #fbd160, 0 0 0.375rem #fbd160, 0 0 0.563rem #fbd160;
+}
+.decoration-sombraDifusa-mint {
+  text-shadow: 0 0 0.188rem #a3d2ca, 0 0 0.375rem #a3d2ca, 0 0 0.563rem #a3d2ca;
+}
+.decoration-sombraDifusa-pinkpastel {
+  text-shadow: 0 0 0.188rem #ffc9de, 0 0 0.375rem #ffc9de, 0 0 0.563rem #ffc9de;
+}
+.decoration-sombraDifusa-lightblue {
+  text-shadow: 0 0 0.188rem #b5eaea, 0 0 0.375rem #b5eaea, 0 0 0.563rem #b5eaea;
+}
+.decoration-sombraDifusa-peach {
+  text-shadow: 0 0 0.188rem #ffdac1, 0 0 0.375rem #ffdac1, 0 0 0.563rem #ffdac1;
+}
+.decoration-sombraDifusa-beige {
+  text-shadow: 0 0 0.188rem #e6e2d3, 0 0 0.375rem #e6e2d3, 0 0 0.563rem #e6e2d3;
+}
+.decoration-sombraDifusa-pastelyellow {
+  text-shadow: 0 0 0.188rem #ffe066, 0 0 0.375rem #ffe066, 0 0 0.563rem #ffe066;
+}
+.decoration-sombraDifusa-lightgreen {
+  text-shadow: 0 0 0.188rem #c1e1c1, 0 0 0.375rem #c1e1c1, 0 0 0.563rem #c1e1c1;
+}
+.decoration-sombraDifusa-peachorange {
+  text-shadow: 0 0 0.188rem #ffd6a5, 0 0 0.375rem #ffd6a5, 0 0 0.563rem #ffd6a5;
+}
+
+/* CONTORNO */
+.decoration-contorno-red {
+  color: white;
+  text-shadow: -0.063rem -0.063rem 0 red, 0.063rem -0.063rem 0 red,
+    -0.063rem 0.063rem 0 red, 0.063rem 0.063rem 0 red;
+}
+.decoration-contorno-blue {
+  color: white;
+  text-shadow: -0.063rem -0.063rem 0 blue, 0.063rem -0.063rem 0 blue,
+    -0.063rem 0.063rem 0 blue, 0.063rem 0.063rem 0 blue;
+}
+.decoration-contorno-green {
+  color: white;
+  text-shadow: -0.063rem -0.063rem 0 green, 0.063rem -0.063rem 0 green,
+    -0.063rem 0.063rem 0 green, 0.063rem 0.063rem 0 green;
+}
+.decoration-contorno-yellow {
+  color: white;
+  text-shadow: -0.063rem -0.063rem 0 yellow, 0.063rem -0.063rem 0 yellow,
+    -0.063rem 0.063rem 0 yellow, 0.063rem 0.063rem 0 yellow;
+}
+.decoration-contorno-black {
+  color: white;
+  text-shadow: -0.063rem -0.063rem 0 black, 0.063rem -0.063rem 0 black,
+    -0.063rem 0.063rem 0 black, 0.063rem 0.063rem 0 black;
+}
+.decoration-contorno-white {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 white, 0.063rem -0.063rem 0 white,
+    -0.063rem 0.063rem 0 white, 0.063rem 0.063rem 0 white;
+}
+.decoration-contorno-yellowsoft {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #fbd160, 0.063rem -0.063rem 0 #fbd160,
+    -0.063rem 0.063rem 0 #fbd160, 0.063rem 0.063rem 0 #fbd160;
+}
+.decoration-contorno-mint {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #a3d2ca, 0.063rem -0.063rem 0 #a3d2ca,
+    -0.063rem 0.063rem 0 #a3d2ca, 0.063rem 0.063rem 0 #a3d2ca;
+}
+.decoration-contorno-pinkpastel {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #ffc9de, 0.063rem -0.063rem 0 #ffc9de,
+    -0.063rem 0.063rem 0 #ffc9de, 0.063rem 0.063rem 0 #ffc9de;
+}
+.decoration-contorno-lightblue {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #b5eaea, 0.063rem -0.063rem 0 #b5eaea,
+    -0.063rem 0.063rem 0 #b5eaea, 0.063rem 0.063rem 0 #b5eaea;
+}
+.decoration-contorno-peach {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #ffdac1, 0.063rem -0.063rem 0 #ffdac1,
+    -0.063rem 0.063rem 0 #ffdac1, 0.063rem 0.063rem 0 #ffdac1;
+}
+.decoration-contorno-beige {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #e6e2d3, 0.063rem -0.063rem 0 #e6e2d3,
+    -0.063rem 0.063rem 0 #e6e2d3, 0.063rem 0.063rem 0 #e6e2d3;
+}
+.decoration-contorno-pastelyellow {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #ffe066, 0.063rem -0.063rem 0 #ffe066,
+    -0.063rem 0.063rem 0 #ffe066, 0.063rem 0.063rem 0 #ffe066;
+}
+.decoration-contorno-lightgreen {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #c1e1c1, 0.063rem -0.063rem 0 #c1e1c1,
+    -0.063rem 0.063rem 0 #c1e1c1, 0.063rem 0.063rem 0 #c1e1c1;
+}
+.decoration-contorno-peachorange {
+  color: black;
+  text-shadow: -0.063rem -0.063rem 0 #ffd6a5, 0.063rem -0.063rem 0 #ffd6a5,
+    -0.063rem 0.063rem 0 #ffd6a5, 0.063rem 0.063rem 0 #ffd6a5;
+}
+
+/* RESALTADO */
+.decoration-resaltado-red,
+.decoration-resaltado-blue,
+.decoration-resaltado-green,
+.decoration-resaltado-yellow,
+.decoration-resaltado-black,
+.decoration-resaltado-white,
+.decoration-resaltado-yellowsoft,
+.decoration-resaltado-mint,
+.decoration-resaltado-pinkpastel,
+.decoration-resaltado-lightblue,
+.decoration-resaltado-peach,
+.decoration-resaltado-beige,
+.decoration-resaltado-pastelyellow,
+.decoration-resaltado-lightgreen,
+.decoration-resaltado-peachorange {
+  border-radius: 1rem;
+  padding: 0.125rem 0.625rem 0.125rem 0.625rem;
+}
+
+.decoration-resaltado-red {
+  background-color: red;
+  color: white;
+}
+
+.decoration-resaltado-blue {
+  background-color: blue;
+  color: white;
+}
+
+.decoration-resaltado-green {
+  background-color: green;
+  color: white;
+}
+
+.decoration-resaltado-yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.decoration-resaltado-black {
+  background-color: black;
+  color: white;
+}
+
+.decoration-resaltado-white {
+  background-color: white;
+  color: black;
+}
+.decoration-resaltado-yellowsoft {
+  background-color: #fbd160;
+  color: black;
+}
+
+.decoration-resaltado-mint {
+  background-color: #a3d2ca;
+  color: black;
+}
+
+.decoration-resaltado-pinkpastel {
+  background-color: #ffc9de;
+  color: black;
+}
+
+.decoration-resaltado-lightblue {
+  background-color: #b5eaea;
+  color: black;
+}
+
+.decoration-resaltado-peach {
+  background-color: #ffdac1;
+  color: black;
+}
+
+.decoration-resaltado-beige {
+  background-color: #e6e2d3;
+  color: black;
+}
+
+.decoration-resaltado-pastelyellow {
+  background-color: #ffe066;
+  color: black;
+}
+
+.decoration-resaltado-lightgreen {
+  background-color: #c1e1c1;
+  color: black;
+}
+
+.decoration-resaltado-peachorange {
+  background-color: #ffd6a5;
+  color: black;
+}
