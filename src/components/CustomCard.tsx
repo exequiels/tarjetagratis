@@ -33,6 +33,13 @@ const CustomCard = ({
   horarioSize,
   direccionSize,
 
+  /* Animaciones */
+  nombreAnimar,
+  cuantosAnimar,
+  cuandoAnimar,
+  horarioAnimar,
+  direccionAnimar,
+
   /* Orden */
   nombreOrden,
   cuantosOrden,
@@ -44,8 +51,20 @@ const CustomCard = ({
   horarioAlinear,
   direccionAlinear,
 }: CardFormData) => {
-  const getClasses = (color: string, decoration: string, size: string) => {
-    return [color, decoration, size]
+  // const getClasses = (color: string, decoration: string, size: string) => {
+  //   return [color, decoration, size]
+  //     .filter((cls) => cls && typeof cls === 'string' && cls.trim() !== '')
+  //     .join(' ')
+  //     .trim()
+  // }
+
+  const getClasses = (
+    color: string,
+    decoration: string,
+    size: string,
+    animar?: string
+  ) => {
+    return [color, decoration, size, animar]
       .filter((cls) => cls && typeof cls === 'string' && cls.trim() !== '')
       .join(' ')
       .trim()
@@ -116,7 +135,8 @@ const CustomCard = ({
                   className={getClasses(
                     nombreColor ?? '',
                     nombreDecoration ?? '',
-                    nombreSize ?? ''
+                    nombreSize ?? '',
+                    nombreAnimar ?? ''
                   )}
                 >
                   {nombre || ''}
@@ -143,7 +163,8 @@ const CustomCard = ({
                     className={getClasses(
                       cuantosColor ?? '',
                       cuantosDecoration ?? '',
-                      cuantosSize ?? ''
+                      cuantosSize ?? '',
+                      cuantosAnimar ?? ''
                     )}
                   >
                     {cuantos || ''}
@@ -161,7 +182,8 @@ const CustomCard = ({
                       className={getClasses(
                         cuandoColor ?? '',
                         cuandoDecoration ?? '',
-                        cuandoSize ?? ''
+                        cuandoSize ?? '',
+                        cuandoAnimar ?? ''
                       )}
                     >
                       {cuando || ''}
@@ -178,7 +200,8 @@ const CustomCard = ({
                         getClasses(
                           horarioColor ?? '',
                           horarioDecoration ?? '',
-                          horarioSize ?? ''
+                          horarioSize ?? '',
+                          horarioAnimar ?? ''
                         ) + ' mt-3'
                       }
                     >
@@ -204,7 +227,8 @@ const CustomCard = ({
                     className={getClasses(
                       direccionColor ?? '',
                       direccionDecoration ?? '',
-                      direccionSize ?? ''
+                      direccionSize ?? '',
+                      direccionAnimar ?? ''
                     )}
                   >
                     {direccion || ''}

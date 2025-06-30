@@ -11,7 +11,7 @@ const plantillas = [
     label: 'Cumple de Campanita',
     value: {
       /* Globales */
-      fondo: './images/hadas_01.jpg',
+      fondo: './videos/hadas_marco_01_mov.mp4',
       fuente: 'HennyPenny, cursive',
 
       /* Inputs */
@@ -41,6 +41,13 @@ const plantillas = [
       cuandoSize: 'text-6xl',
       horarioSize: 'text-4xl',
       direccionSize: 'text-2xl',
+
+      /* Animaciones */
+      nombreAnimar: 'animate__animated animate__flipInX',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
 
       /* Orden */
       nombreOrden: 'flex-order-0',
@@ -90,6 +97,13 @@ const plantillas = [
       horarioSize: 'text-xl',
       direccionSize: 'text-xl',
 
+      /* Animaciones */
+      nombreAnimar: '',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
+
       /* Orden */
       nombreOrden: 'flex-order-0',
       cuantosOrden: 'flex-row',
@@ -138,6 +152,13 @@ const plantillas = [
       horarioSize: 'text-4xl',
       direccionSize: 'text-2xl',
 
+      /* Animaciones */
+      nombreAnimar: 'animate__heartBeat',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
+
       /* Orden */
       nombreOrden: 'flex-order-0',
       cuantosOrden: 'flex-row',
@@ -185,6 +206,13 @@ const plantillas = [
       horarioSize: 'text-4xl',
       direccionSize: 'text-4xl',
 
+      /* Animaciones */
+      nombreAnimar: '',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
+
       /* Orden */
       nombreOrden: 'flex-order-0',
       cuantosOrden: 'flex-row',
@@ -231,6 +259,13 @@ const plantillas = [
       cuandoSize: 'text-6xl',
       horarioSize: 'text-4xl',
       direccionSize: 'text-4xl',
+
+      /* Animaciones */
+      nombreAnimar: '',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
 
       /* Orden */
       nombreOrden: 'flex-order-1',

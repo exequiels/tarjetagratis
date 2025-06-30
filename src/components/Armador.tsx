@@ -9,10 +9,11 @@ import DropdownSize from './estilos/DropdownSize'
 import DropdownNombreOrden from './estilos/DropdownNombreOrden'
 import DropdownCuantosOrden from './estilos/DropdownCuantosOrden'
 import DropdownAlinear from './estilos/DropdownAlinear'
+import DropdownPlantillas from './estilos/DropdownPlantillas'
+import DropdownAnimar from './estilos/DropdownAnimar'
 import { OverlayPanel } from 'primereact/overlaypanel'
 import { Button } from 'primereact/button'
 import { useCallback, useRef } from 'react'
-import DropdownPlantillas from './estilos/DropdownPlantillas'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -40,6 +41,11 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
   const handleSizeChange = (fieldId: string, sizeValue: string) => {
     const sizeKey = `${fieldId}Size` as keyof CardFormData
     setFormData({ ...formData, [sizeKey]: sizeValue })
+  }
+
+  const handleAnimarChange = (fieldId: string, animarValue: string) => {
+    const animarKey = `${fieldId}Animar` as keyof CardFormData
+    setFormData({ ...formData, [animarKey]: animarValue })
   }
 
   const handleOrderChange = (fieldId: string, orderValue: string) => {
@@ -139,6 +145,16 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                   }
                   onChange={(sizeValue) =>
                     handleSizeChange(opcion.id, sizeValue)
+                  }
+                />
+                <DropdownAnimar
+                  value={
+                    (formData[
+                      `${opcion.id}Animar` as keyof CardFormData
+                    ] as string) || ''
+                  }
+                  onChange={(animarValue) =>
+                    handleAnimarChange(opcion.id, animarValue)
                   }
                 />
               </div>

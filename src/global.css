@@ -1,5 +1,6 @@
 @import url('./assets/fonts.css');
 @import url('./assets/decoraciones.css');
+@import 'animate.css';
 
 h1,
 h2,
@@ -62,7 +63,7 @@ body {
 .fondo-imagen {
   width: 100%;
   aspect-ratio: 9 / 16;
-  background-image: url('https://placehold.co/450x800');
+  background-image: url('https://placehold.co/450x800/D8D8D8/D8D8D8?text=+');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

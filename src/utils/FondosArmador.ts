@@ -19,6 +19,7 @@ export const fondos = [
   { label: 'Espacio 03', value: './images/espacio_03.png' },
   { label: 'Espacio 04', value: './images/espacio_04.png' },
   { label: 'Hadas 01', value: './images/hadas_01.jpg' },
+  { label: 'Hadas 01 Mov', value: './videos/hadas_marco_01_mov.mp4' },
   { label: 'Hadas 02', value: './images/hadas_02.jpg' },
   { label: 'Hadas 03', value: './images/hadas_03.jpg' },
   { label: 'Hadas 04', value: './images/hadas_04.jpg' },

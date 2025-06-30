@@ -31,6 +31,13 @@ export type CardFormData = {
   horarioSize?: string
   direccionSize?: string
 
+  /* Animaciones */
+  nombreAnimar?: string
+  cuantosAnimar?: string
+  cuandoAnimar?: string
+  horarioAnimar?: string
+  direccionAnimar?: string
+
   /* Orden */
   nombreOrden?: string
   cuantosOrden?: string

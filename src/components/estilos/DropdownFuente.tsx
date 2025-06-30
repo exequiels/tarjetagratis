@@ -87,6 +87,12 @@ const DropdownFuente = ({ value, onChange }: Props) => {
 
       <Dropdown
         inputId="fuente"
+        filter
+        filterIcon
+        showFilterClear
+        resetFilterOnHide
+        filterPlaceholder="Que buscas?"
+        emptyFilterMessage="No hay resultados para esa busqueda"
         value={value}
         options={fontOptions}
         onChange={(e) => onChange(e.value)}

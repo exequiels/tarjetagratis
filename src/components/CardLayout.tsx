@@ -4,11 +4,12 @@ import CustomCard from './CustomCard'
 import type { CardFormData } from '../types/CardFormData'
 import { generateCard } from '../services/cardService'
 import { Button } from 'primereact/button'
+import { Sidebar } from 'primereact/sidebar'
 
 const CardLayout = () => {
   const [formData, setFormData] = useState<CardFormData>({
     /* Globales */
-    fondo: './images/hadas_01.jpg',
+    fondo: './videos/hadas_marco_01_mov.mp4',
     fuente: 'HennyPenny, cursive',
 
     /* Inputs */
@@ -39,6 +40,13 @@ const CardLayout = () => {
     horarioSize: 'text-4xl',
     direccionSize: 'text-2xl',
 
+    /* Animaciones */
+    nombreAnimar: 'animate__animated animate__flipInX',
+    cuantosAnimar: '',
+    cuandoAnimar: '',
+    horarioAnimar: '',
+    direccionAnimar: '',
+
     /* Orden */
     nombreOrden: 'flex-order-0',
     cuantosOrden: 'flex-row-reverse',
@@ -65,13 +73,32 @@ const CardLayout = () => {
       setLoading(false)
     }
   }
+  const [visible, setVisible] = useState<boolean>(false)
 
   console.log(JSON.stringify(formData, null, 2))
 
   return (
     <div className="flex justify-content-center p-4">
+      <div className="card flex justify-content-center border-1 border-dashed border-round-lg block md:hidden">
+        <Sidebar
+          className="bg-verde"
+          visible={visible}
+          onHide={() => setVisible(false)}
+          blockScroll
+        >
+          <Armador formData={formData} setFormData={setFormData} />
+        </Sidebar>
+        <Button
+          className="bg-green-200"
+          icon="pi pi-bars"
+          onClick={() => setVisible(true)}
+        />
+      </div>
       <div className="border-1 border-dashed border-round-lg hidden md:block col-4">
         <Armador formData={formData} setFormData={setFormData} />
+      </div>
+      <div className="col-12 md:col-6 centrado">
+        <CustomCard {...formData} />
         <div className="flex justify-content-end mt-3">
           <Button
             className="bg-green-200"
@@ -80,7 +107,6 @@ const CardLayout = () => {
             disabled={loading}
           />
         </div>
-
         {generatedUrl && (
           <div className="mt-2">
             <p>Enlace generado:</p>
@@ -89,9 +115,6 @@ const CardLayout = () => {
             </a>
           </div>
         )}
-      </div>
-      <div className="col-12 md:col-6 centrado">
-        <CustomCard {...formData} />
       </div>
     </div>
   )
