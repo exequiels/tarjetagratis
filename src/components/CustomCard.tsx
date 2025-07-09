@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { CardFormData } from '../types/CardFormData'
 
 const CustomCard = ({
@@ -33,9 +34,17 @@ const CustomCard = ({
   horarioSize,
   direccionSize,
 
+  /* Animaciones */
+  nombreAnimar,
+  cuantosAnimar,
+  cuandoAnimar,
+  horarioAnimar,
+  direccionAnimar,
+
   /* Orden */
   nombreOrden,
   cuantosOrden,
+  cuantosDistribucion,
 
   /* Alineaciones */
   nombreAlinear,
@@ -44,8 +53,20 @@ const CustomCard = ({
   horarioAlinear,
   direccionAlinear,
 }: CardFormData) => {
-  const getClasses = (color: string, decoration: string, size: string) => {
-    return [color, decoration, size]
+  // const getClasses = (color: string, decoration: string, size: string) => {
+  //   return [color, decoration, size]
+  //     .filter((cls) => cls && typeof cls === 'string' && cls.trim() !== '')
+  //     .join(' ')
+  //     .trim()
+  // }
+  const [isTaped, setIsTaped] = useState(false)
+  const getClasses = (
+    color: string,
+    decoration: string,
+    size: string,
+    animar?: string
+  ) => {
+    return [color, decoration, size, animar]
       .filter((cls) => cls && typeof cls === 'string' && cls.trim() !== '')
       .join(' ')
       .trim()
@@ -62,18 +83,18 @@ const CustomCard = ({
   const isCuantosReversed = cuantosOrden === 'flex-row-reverse'
 
   return (
-    <div className="centrado w-full" style={{ fontFamily: fuente }}>
-      {/* <div
-        className="flex flex-column max-w-25rem md:max-w-40rem fondo-imagen border-1"
-        style={{ backgroundImage: `url(${fondo})` }}
-      > */}
-
+    <div
+      className={`centrado w-full tarjeta-3d ${isTaped ? 'active' : ''}`}
+      onClick={() => setIsTaped(!isTaped)}
+      style={{ fontFamily: fuente }}
+    >
       <div
-        className="flex flex-column max-w-25rem md:max-w-40rem border-1 relative overflow-hidden fondo-imagen"
+        className="flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden fondo-imagen"
         style={{ fontFamily: fuente }}
       >
         {fondo.endsWith('.mp4') ? (
           <video
+            key={fondo}
             autoPlay
             muted
             loop
@@ -116,7 +137,8 @@ const CustomCard = ({
                   className={getClasses(
                     nombreColor ?? '',
                     nombreDecoration ?? '',
-                    nombreSize ?? ''
+                    nombreSize ?? '',
+                    nombreAnimar ?? ''
                   )}
                 >
                   {nombre || ''}
@@ -124,7 +146,7 @@ const CustomCard = ({
               </div>
 
               {/* Cuantos */}
-              <div
+              {/* <div
                 className={`flex ${
                   isCuantosReversed ? 'flex-row-reverse' : 'flex-row'
                 } w-full ${
@@ -135,15 +157,35 @@ const CustomCard = ({
                     : 'flex-order-1'
                 }`}
                 style={{ flexBasis: '40%', flexShrink: 0, flexGrow: 0 }}
+              > */}
+              <div
+                className={`flex ${
+                  isCuantosReversed
+                    ? `flex-${cuantosDistribucion}-reverse`
+                    : `flex-${cuantosDistribucion}`
+                } w-full ${
+                  nombreOrden === 'flex-order-0'
+                    ? 'flex-order-1'
+                    : nombreOrden === 'flex-order-1'
+                    ? 'flex-order-0'
+                    : 'flex-order-1'
+                }`}
+                style={{ flexBasis: '40%', flexShrink: 0, flexGrow: 0 }}
               >
-                <div
+                {/* <div
                   className={`col-6 flex ${cuantosAlinear} justify-content-center`}
+                > */}
+                <div
+                  className={`${
+                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                  } flex ${cuantosAlinear} justify-content-center`}
                 >
                   <span
                     className={getClasses(
                       cuantosColor ?? '',
                       cuantosDecoration ?? '',
-                      cuantosSize ?? ''
+                      cuantosSize ?? '',
+                      cuantosAnimar ?? ''
                     )}
                   >
                     {cuantos || ''}
@@ -151,7 +193,12 @@ const CustomCard = ({
                 </div>
 
                 {/* Cuando/Horario */}
-                <div className="col-6 flex flex-column">
+                {/* <div className="col-6 flex flex-column"> */}
+                <div
+                  className={`${
+                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                  } flex flex-column`}
+                >
                   {/* Cuando */}
                   <div
                     className={`flex w-full ${cuandoAlinear} justify-content-center`}
@@ -161,7 +208,8 @@ const CustomCard = ({
                       className={getClasses(
                         cuandoColor ?? '',
                         cuandoDecoration ?? '',
-                        cuandoSize ?? ''
+                        cuandoSize ?? '',
+                        cuandoAnimar ?? ''
                       )}
                     >
                       {cuando || ''}
@@ -178,7 +226,8 @@ const CustomCard = ({
                         getClasses(
                           horarioColor ?? '',
                           horarioDecoration ?? '',
-                          horarioSize ?? ''
+                          horarioSize ?? '',
+                          horarioAnimar ?? ''
                         ) + ' mt-3'
                       }
                     >
@@ -188,9 +237,9 @@ const CustomCard = ({
                 </div>
               </div>
 
-              {/* Donde/Dirección */}
+              {/* Dirección */}
               <div
-                className={`flex ${direccionAlinear} ${
+                className={`flex  w-full ${direccionAlinear} justify-content-center ${
                   nombreOrden === 'flex-order-0'
                     ? 'flex-order-2'
                     : nombreOrden === 'flex-order-1'
@@ -199,17 +248,16 @@ const CustomCard = ({
                 }`}
                 style={{ flexBasis: '30%', flexShrink: 0, flexGrow: 0 }}
               >
-                <div>
-                  <span
-                    className={getClasses(
-                      direccionColor ?? '',
-                      direccionDecoration ?? '',
-                      direccionSize ?? ''
-                    )}
-                  >
-                    {direccion || ''}
-                  </span>
-                </div>
+                <span
+                  className={getClasses(
+                    direccionColor ?? '',
+                    direccionDecoration ?? '',
+                    direccionSize ?? '',
+                    direccionAnimar ?? ''
+                  )}
+                >
+                  {direccion || ''}
+                </span>
               </div>
             </div>
 

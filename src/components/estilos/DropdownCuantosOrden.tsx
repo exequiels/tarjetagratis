@@ -10,7 +10,7 @@ const DropdownNombreOrden = ({ value, onChange }: Props) => {
   return (
     <div className="flex justify-content-between align-items-center">
       <div>
-        <label htmlFor="reverse">Columna: </label>{' '}
+        <label htmlFor="reverse">Orden: </label>{' '}
       </div>
       <Dropdown
         inputId="reverse"

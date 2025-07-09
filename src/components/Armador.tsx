@@ -9,10 +9,12 @@ import DropdownSize from './estilos/DropdownSize'
 import DropdownNombreOrden from './estilos/DropdownNombreOrden'
 import DropdownCuantosOrden from './estilos/DropdownCuantosOrden'
 import DropdownAlinear from './estilos/DropdownAlinear'
+import DropdownPlantillas from './estilos/DropdownPlantillas'
+import DropdownAnimar from './estilos/DropdownAnimar'
 import { OverlayPanel } from 'primereact/overlaypanel'
 import { Button } from 'primereact/button'
 import { useCallback, useRef } from 'react'
-import DropdownPlantillas from './estilos/DropdownPlantillas'
+import DropdownCuantosDistribucion from './estilos/DropdownCuantosDistribucion'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -42,6 +44,11 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
     setFormData({ ...formData, [sizeKey]: sizeValue })
   }
 
+  const handleAnimarChange = (fieldId: string, animarValue: string) => {
+    const animarKey = `${fieldId}Animar` as keyof CardFormData
+    setFormData({ ...formData, [animarKey]: animarValue })
+  }
+
   const handleOrderChange = (fieldId: string, orderValue: string) => {
     const orderKey = `${fieldId}Orden` as keyof CardFormData
     setFormData({ ...formData, [orderKey]: orderValue })
@@ -56,7 +63,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
 
   return (
     <>
-      <div className="mt-4 p-3 bg-white border-round-lg">
+      <div className="p-3 bg-white border-round-lg">
         <DropdownPlantillas
           value={formData}
           onChange={(selectedPlantilla) => setFormData(selectedPlantilla)}
@@ -90,12 +97,12 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               placeholder={opcion.placeholder}
               maxLength={
                 opcion.id === 'nombre'
-                  ? 30
+                  ? 40
                   : opcion.id === 'cuantos'
-                  ? 10
+                  ? 20
                   : opcion.id === 'direccion'
-                  ? 100
-                  : 25
+                  ? 150
+                  : 50
               }
             />
             <Button
@@ -141,6 +148,17 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                     handleSizeChange(opcion.id, sizeValue)
                   }
                 />
+                <DropdownAnimar
+                  fieldId={opcion.id}
+                  value={
+                    (formData[
+                      `${opcion.id}Animar` as keyof CardFormData
+                    ] as string) || ''
+                  }
+                  onChange={(animarValue) =>
+                    handleAnimarChange(opcion.id, animarValue)
+                  }
+                />
               </div>
               {(opcion.id === 'nombre' ||
                 opcion.id === 'cuantos' ||
@@ -164,7 +182,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                       }
                     />
                   )}
-                  {opcion.id === 'cuantos' && (
+                  {/* {opcion.id === 'cuantos' && (
                     <DropdownCuantosOrden
                       value={
                         (formData[
@@ -175,7 +193,31 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                         handleOrderChange(opcion.id, orderValue)
                       }
                     />
+                  )} */}
+                  {opcion.id === 'cuantos' && (
+                    <>
+                      <DropdownCuantosOrden
+                        value={
+                          (formData[
+                            `${opcion.id}Orden` as keyof CardFormData
+                          ] as string) || ''
+                        }
+                        onChange={(orderValue) =>
+                          handleOrderChange(opcion.id, orderValue)
+                        }
+                      />
+                      <DropdownCuantosDistribucion
+                        value={formData.cuantosDistribucion ?? ''}
+                        onChange={(value) =>
+                          setFormData({
+                            ...formData,
+                            cuantosDistribucion: value,
+                          })
+                        }
+                      />
+                    </>
                   )}
+
                   {[
                     'nombre',
                     'cuantos',

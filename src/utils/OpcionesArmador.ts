@@ -18,7 +18,7 @@ export const opcionesArmador = [
   { id: 'horario', label: 'Horario:', placeholder: 'Ej: 17:00hs a 20:00hs..' },
   {
     id: 'direccion',
-    label: 'Direccion?',
+    label: 'Dirección?',
     placeholder: 'Ej: En mi casa, Boulevard 123..',
   },
 ]
