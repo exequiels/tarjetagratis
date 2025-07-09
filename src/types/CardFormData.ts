@@ -41,6 +41,7 @@ export type CardFormData = {
   /* Orden */
   nombreOrden?: string
   cuantosOrden?: string
+  cuantosDistribucion?: string
 
   /* Alineaciones */
   nombreAlinear?: string

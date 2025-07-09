@@ -3,10 +3,8 @@ import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
 import { PrimeReactProvider } from 'primereact/api'
-import CardLayout from './components/CardLayout'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import 'animate.css'
+import { BrowserRouter } from 'react-router-dom'
+import Rutas from './components/Rutas'
 
 function App() {
   const value = {
@@ -15,9 +13,9 @@ function App() {
   return (
     <>
       <PrimeReactProvider value={value}>
-        <Header />
-        <CardLayout />
-        <Footer />
+        <BrowserRouter>
+          <Rutas />
+        </BrowserRouter>
       </PrimeReactProvider>
     </>
   )

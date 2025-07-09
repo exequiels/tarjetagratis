@@ -14,6 +14,7 @@ import DropdownAnimar from './estilos/DropdownAnimar'
 import { OverlayPanel } from 'primereact/overlaypanel'
 import { Button } from 'primereact/button'
 import { useCallback, useRef } from 'react'
+import DropdownCuantosDistribucion from './estilos/DropdownCuantosDistribucion'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -62,7 +63,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
 
   return (
     <>
-      <div className="mt-4 p-3 bg-white border-round-lg">
+      <div className="p-3 bg-white border-round-lg">
         <DropdownPlantillas
           value={formData}
           onChange={(selectedPlantilla) => setFormData(selectedPlantilla)}
@@ -96,12 +97,12 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               placeholder={opcion.placeholder}
               maxLength={
                 opcion.id === 'nombre'
-                  ? 30
+                  ? 40
                   : opcion.id === 'cuantos'
-                  ? 10
+                  ? 20
                   : opcion.id === 'direccion'
-                  ? 100
-                  : 25
+                  ? 150
+                  : 50
               }
             />
             <Button
@@ -181,7 +182,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                       }
                     />
                   )}
-                  {opcion.id === 'cuantos' && (
+                  {/* {opcion.id === 'cuantos' && (
                     <DropdownCuantosOrden
                       value={
                         (formData[
@@ -192,7 +193,31 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                         handleOrderChange(opcion.id, orderValue)
                       }
                     />
+                  )} */}
+                  {opcion.id === 'cuantos' && (
+                    <>
+                      <DropdownCuantosOrden
+                        value={
+                          (formData[
+                            `${opcion.id}Orden` as keyof CardFormData
+                          ] as string) || ''
+                        }
+                        onChange={(orderValue) =>
+                          handleOrderChange(opcion.id, orderValue)
+                        }
+                      />
+                      <DropdownCuantosDistribucion
+                        value={formData.cuantosDistribucion ?? ''}
+                        onChange={(value) =>
+                          setFormData({
+                            ...formData,
+                            cuantosDistribucion: value,
+                          })
+                        }
+                      />
+                    </>
                   )}
+
                   {[
                     'nombre',
                     'cuantos',

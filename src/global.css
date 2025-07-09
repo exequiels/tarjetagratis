@@ -2,6 +2,7 @@
 @import url('./assets/decoraciones.css');
 @import 'animate.css';
 
+body,
 h1,
 h2,
 h3,
@@ -74,6 +75,8 @@ body {
   text-align: center;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 10px 16px 36px -4px rgba(0, 0, 0, 0.4),
+    0 8px 24px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* TAMAÑOS CUSTOM */
@@ -87,4 +90,65 @@ body {
 
 .text-18xl {
   font-size: 16rem;
+}
+
+.tarjeta-cargando {
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  10% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+}
+
+.tarjeta-3d {
+  position: relative;
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tarjeta-3d .fondo-imagen {
+  transition: transform 0.8s cubic-bezier(0.2, 0.64, 0.48, 0.95),
+    box-shadow 0.8s cubic-bezier(0.2, 0.64, 0.48, 0.95);
+  will-change: transform;
+}
+
+/* ESCRITORIO HOVER */
+@media (hover: hover) and (pointer: fine) {
+  .tarjeta-3d:hover .fondo-imagen {
+    transform: perspective(600px) rotateX(10deg) translateY(-16px) scale(1.035);
+    box-shadow: 10px 16px 36px -4px rgba(0, 0, 0, 0.4),
+      0 8px 24px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* CELULAR TAP */
+@media (hover: none) and (pointer: coarse) {
+  .tarjeta-3d.active .fondo-imagen {
+    transform: perspective(600px) rotateX(8deg) translateY(-14px) scale(1.025);
+    box-shadow: 10px 16px 36px -4px rgba(0, 0, 0, 0.4),
+      0 8px 24px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.elevation {
+  box-shadow: 10px 16px 36px -4px rgba(0, 0, 0, 0.4),
+    0 8px 24px -2px rgba(0, 0, 0, 0.2);
 }
