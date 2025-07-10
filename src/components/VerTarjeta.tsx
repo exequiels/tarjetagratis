@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Tarjeta from '../pages/Tarjeta'
 import type { CardFormData } from '../types/CardFormData'
 import config from '../config'
+import SEO from './SEO'
 
 const VerTarjeta = () => {
   const { code } = useParams<{ code: string }>()
@@ -19,7 +20,6 @@ const VerTarjeta = () => {
       .then(setCardData)
       .catch(console.error)
   }, [shortCode])
-  console.log('shortCode', shortCode)
 
   useEffect(() => {
     if (cardData?.nombre) {
@@ -32,12 +32,20 @@ const VerTarjeta = () => {
   if (!cardData)
     return (
       <div className="flex justify-content-center align-items-center min-h-screen">
-        <div className="flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden"></div>
+        <div className="flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden">
+          No hay datos para mostrar.
+        </div>
       </div>
     )
 
   return (
     <div className="flex justify-content-center align-items-center min-h-screen">
+      <SEO
+        title="¡Te invito a mi cumple! ✨ | TarjetaGratis"
+        description="Crea invitaciones digitales gratis y personalizadas para cumpleaños infantiles. ¡Mágicas, rápidas y sin registros!"
+        canonicalUrl="https://tarjetagratis.com/tarjeta"
+        keywords="invitación infantil, tarjeta de cumpleaños, cumpleaños digital, tarjeta gratis"
+      />
       <Tarjeta {...cardData} />
     </div>
   )
