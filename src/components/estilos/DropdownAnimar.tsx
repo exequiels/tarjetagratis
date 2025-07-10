@@ -7,8 +7,6 @@ type DropdownAnimarProps = Props & {
 }
 
 const DropdownAnimar = ({ fieldId, value, onChange }: DropdownAnimarProps) => {
-  console.log('DropdownAnimar render:', fieldId, 'value:', value)
-
   return (
     <div className="flex justify-content-between align-items-center mt-2 p-3 bg-verde border-round-lg">
       <div>
@@ -17,6 +15,7 @@ const DropdownAnimar = ({ fieldId, value, onChange }: DropdownAnimarProps) => {
         </label>
       </div>
       <Dropdown
+        id={fieldId}
         inputId="animar"
         filter
         filterIcon

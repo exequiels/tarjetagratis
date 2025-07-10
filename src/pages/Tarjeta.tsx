@@ -31,6 +31,7 @@ const Tarjeta = ({
   direccionAnimar,
   nombreOrden,
   cuantosOrden,
+  cuantosDistribucion,
   nombreAlinear,
   cuantosAlinear,
   cuandoAlinear,
@@ -79,7 +80,7 @@ const Tarjeta = ({
       onClick={() => setIsTaped(!isTaped)}
     >
       <div
-        className={`flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden fondo-imagen ${
+        className={`flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden fondo-imagen mb-5 ${
           !isReady ? 'tarjeta-cargando' : ''
         }`}
       >
@@ -139,7 +140,9 @@ const Tarjeta = ({
               {/* Cuantos */}
               <div
                 className={`flex ${
-                  isCuantosReversed ? 'flex-row-reverse' : 'flex-row'
+                  isCuantosReversed
+                    ? `flex-${cuantosDistribucion}-reverse`
+                    : `flex-${cuantosDistribucion}`
                 } w-full ${
                   nombreOrden === 'flex-order-0'
                     ? 'flex-order-1'
@@ -150,21 +153,28 @@ const Tarjeta = ({
                 style={{ flexBasis: '40%', flexShrink: 0, flexGrow: 0 }}
               >
                 <div
-                  className={`col-6 flex ${cuantosAlinear} justify-content-center`}
+                  className={`${
+                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                  } flex ${cuantosAlinear} justify-content-center`}
                 >
                   <span
                     className={getClasses(
                       cuantosColor ?? '',
                       cuantosDecoration ?? '',
                       cuantosSize ?? '',
-                      cuantosAnimar
+                      cuantosAnimar ?? ''
                     )}
                   >
                     {cuantos || ''}
                   </span>
                 </div>
 
-                <div className="col-6 flex flex-column">
+                {/* Cuando/Horario */}
+                <div
+                  className={`${
+                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                  } flex flex-column`}
+                >
                   {/* Cuando */}
                   <div
                     className={`flex w-full ${cuandoAlinear} justify-content-center`}
@@ -175,7 +185,7 @@ const Tarjeta = ({
                         cuandoColor ?? '',
                         cuandoDecoration ?? '',
                         cuandoSize ?? '',
-                        cuandoAnimar
+                        cuandoAnimar ?? ''
                       )}
                     >
                       {cuando || ''}
@@ -184,16 +194,18 @@ const Tarjeta = ({
 
                   {/* Horario */}
                   <div
-                    className={`flex w-full ${horarioAlinear} justify-content-center mt-3`}
+                    className={`flex w-full ${horarioAlinear} justify-content-center`}
                     style={{ flexBasis: '50%' }}
                   >
                     <span
-                      className={getClasses(
-                        horarioColor ?? '',
-                        horarioDecoration ?? '',
-                        horarioSize ?? '',
-                        horarioAnimar
-                      )}
+                      className={
+                        getClasses(
+                          horarioColor ?? '',
+                          horarioDecoration ?? '',
+                          horarioSize ?? '',
+                          horarioAnimar ?? ''
+                        ) + ' mt-3'
+                      }
                     >
                       {horario || ''}
                     </span>
@@ -231,6 +243,13 @@ const Tarjeta = ({
           <div className="w-full" style={{ flexBasis: '5%' }}></div>
         </div>
       </div>
+      <a
+        href="https://tarjetagratis.com/"
+        target="_blank"
+        className="underline mt-5 text-blue-500"
+      >
+        Crear una tarjeta
+      </a>
     </div>
   )
 }

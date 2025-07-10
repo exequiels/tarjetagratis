@@ -4,7 +4,8 @@ import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
 import { PrimeReactProvider } from 'primereact/api'
 import { BrowserRouter } from 'react-router-dom'
-import Rutas from './components/Rutas'
+import Rutas from './routes/Rutas'
+import { HelmetProvider } from 'react-helmet-async'
 
 function App() {
   const value = {
@@ -13,9 +14,11 @@ function App() {
   return (
     <>
       <PrimeReactProvider value={value}>
-        <BrowserRouter>
-          <Rutas />
-        </BrowserRouter>
+        <HelmetProvider>
+          <BrowserRouter>
+            <Rutas />
+          </BrowserRouter>
+        </HelmetProvider>
       </PrimeReactProvider>
     </>
   )

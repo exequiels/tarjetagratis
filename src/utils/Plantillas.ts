@@ -178,7 +178,7 @@ export const plantillas = [
       nombre: 'Margarita',
       cuantos: '3',
       cuando: 'Lunes 02 de Abril',
-      horario: '',
+      horario: '12pm',
       direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
 
       /* Colores */
