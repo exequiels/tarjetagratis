@@ -1,4 +1,5 @@
 export const fondos = [
+  { label: 'Hoja en Blanco', value: '/images/blank.png' },
   { label: 'Abstract 01', value: '/images/abstract_01.webp' },
   { label: 'Abstract 02', value: '/images/abstract_02.webp' },
   { label: 'Abstract 03', value: '/images/abstract_03.webp' },

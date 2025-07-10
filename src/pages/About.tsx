@@ -22,17 +22,12 @@ const About = () => {
 
           <ul className="list-disc text-left px-5 space-y-2 text-base mt-4">
             <li>
-              <strong>Mentores</strong> que me desafíen técnicamente y den
-              feedback honesto
+              <strong>Mentores</strong> que me desafíen y den feedback honesto
             </li>
             <li>Espacios donde la creatividad rompa convenciones</li>
             <li>Ideas locas con propósito, bienvenidas</li>
             <li>Crecimiento que nace de la colaboración genuina</li>
-            <li>Aprender en comunidad y construir algo juntos</li>
             <li>Conexiones humanas antes que facturación</li>
-            <li>
-              Superar el síndrome del impostor compartiendo, no compitiendo
-            </li>
           </ul>
 
           <p className="text-base mt-4">

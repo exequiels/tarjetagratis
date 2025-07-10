@@ -4,6 +4,7 @@ import Tarjeta from '../pages/Tarjeta'
 import type { CardFormData } from '../types/CardFormData'
 import config from '../config'
 import SEO from './SEO'
+import { ProgressSpinner } from 'primereact/progressspinner'
 
 const VerTarjeta = () => {
   const { code } = useParams<{ code: string }>()
@@ -33,7 +34,7 @@ const VerTarjeta = () => {
     return (
       <div className="flex justify-content-center align-items-center min-h-screen">
         <div className="flex flex-column max-w-25rem md:max-w-40rem relative overflow-hidden">
-          No hay datos para mostrar.
+          <ProgressSpinner />
         </div>
       </div>
     )

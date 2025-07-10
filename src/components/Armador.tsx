@@ -15,6 +15,7 @@ import { OverlayPanel } from 'primereact/overlaypanel'
 import { Button } from 'primereact/button'
 import { useCallback, useRef } from 'react'
 import DropdownCuantosDistribucion from './estilos/DropdownCuantosDistribucion'
+// import { plantillas } from '../utils/Plantillas'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -22,6 +23,10 @@ type ArmadorProps = {
 }
 
 const Armador = ({ formData, setFormData }: ArmadorProps) => {
+  // const plantillaVacia = plantillas.find(
+  //   (p) => p.label === 'Tarjeta Vacia'
+  // )?.value
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value })
   }
@@ -84,6 +89,18 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
             }
           />
         </div>
+        {/* <div className="mt-2 flex justify-content-end">
+          <Button
+            label="Reset datos"
+            icon="pi pi-refresh"
+            className="mt-4 p-button-secondary"
+            onClick={() => {
+              if (plantillaVacia) {
+                setFormData(plantillaVacia)
+              }
+            }}
+          />
+        </div> */}
       </div>
       {opcionesArmador.map((opcion, i) => (
         <div className="mt-4" key={opcion.id}>

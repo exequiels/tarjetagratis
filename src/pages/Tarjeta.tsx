@@ -71,6 +71,7 @@ const Tarjeta = ({
       : 'flex-order-0'
   }
 
+  const distribucion = cuantosDistribucion ?? 'row'
   const isCuantosReversed = cuantosOrden === 'flex-row-reverse'
 
   return (
@@ -141,8 +142,8 @@ const Tarjeta = ({
               <div
                 className={`flex ${
                   isCuantosReversed
-                    ? `flex-${cuantosDistribucion}-reverse`
-                    : `flex-${cuantosDistribucion}`
+                    ? `flex-${distribucion}-reverse`
+                    : `flex-${distribucion}`
                 } w-full ${
                   nombreOrden === 'flex-order-0'
                     ? 'flex-order-1'
@@ -154,7 +155,7 @@ const Tarjeta = ({
               >
                 <div
                   className={`${
-                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                    distribucion === 'column' ? 'w-full' : 'col-6'
                   } flex ${cuantosAlinear} justify-content-center`}
                 >
                   <span
@@ -172,7 +173,7 @@ const Tarjeta = ({
                 {/* Cuando/Horario */}
                 <div
                   className={`${
-                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                    distribucion === 'column' ? 'w-full' : 'col-6'
                   } flex flex-column`}
                 >
                   {/* Cuando */}
@@ -246,7 +247,7 @@ const Tarjeta = ({
       <a
         href="https://tarjetagratis.com/"
         target="_blank"
-        className="underline mt-5 text-blue-500"
+        className="underline mt-3 text-blue-500"
       >
         Crear una tarjeta
       </a>

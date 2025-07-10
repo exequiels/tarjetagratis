@@ -149,7 +149,7 @@ const CardLayout = () => {
       setShowDialog(true)
       showNotification('success', '¡Tarjeta generada con éxito!')
     } catch (error) {
-      showNotification('error', 'Error generando la tarjeta: ' + error)
+      showNotification('error', (error as Error).message)
     } finally {
       setLoading(false)
     }
