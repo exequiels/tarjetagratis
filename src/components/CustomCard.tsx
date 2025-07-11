@@ -80,7 +80,9 @@ const CustomCard = ({
 
   return (
     <div
-      className={`centrado w-full tarjeta-3d ${isTaped ? 'active' : ''}`}
+      className={`border-1 border-dashed p-0 md:p-4 centrado w-full tarjeta-3d ${
+        isTaped ? 'active' : ''
+      }`}
       onClick={() => setIsTaped(!isTaped)}
       style={{ fontFamily: fuente }}
     >

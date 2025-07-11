@@ -8,12 +8,12 @@ import { Sidebar } from 'primereact/sidebar'
 import { Toast } from 'primereact/toast'
 import { Dialog } from 'primereact/dialog'
 import { InputText } from 'primereact/inputtext'
-import ReCAPTCHA from 'react-google-recaptcha'
+// import ReCAPTCHA from 'react-google-recaptcha'
 import config from '../../config'
 import { validaciones } from '../../utils/Validaciones'
 import SEO from '../SEO'
 
-const RECAPTCHA_SITE_KEY = config.VITE_RECAPTCHA
+// const RECAPTCHA_SITE_KEY = config.VITE_RECAPTCHA
 
 const CardLayout = () => {
   const toast = useRef<Toast>(null)
@@ -72,7 +72,7 @@ const CardLayout = () => {
   const [showDialog, setShowDialog] = useState(false)
   const [generatedUrl, setGeneratedUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
-  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  // const recaptchaRef = useRef<ReCAPTCHA>(null)
 
   const showNotification = (severity: 'error' | 'success', message: string) => {
     toast!.current!.show({
@@ -129,22 +129,22 @@ const CardLayout = () => {
     setGeneratedUrl(null)
 
     try {
-      const token = await recaptchaRef.current?.executeAsync()
-      recaptchaRef.current?.reset()
+      // const token = await recaptchaRef.current?.executeAsync()
+      // recaptchaRef.current?.reset()
 
-      if (!token) {
-        showNotification('error', 'Fallo al validar reCAPTCHA.')
-        setLoading(false)
-        return
-      }
+      // if (!token) {
+      //   showNotification('error', 'Fallo al validar reCAPTCHA.')
+      //   setLoading(false)
+      //   return
+      // }
 
-      const payload = {
-        ...formData,
-        'g-recaptcha-response': token,
-      }
+      // const payload = {
+      //   ...formData,
+      //   'g-recaptcha-response': token,
+      // }
 
-      // const url = await generateCard(formData)
-      const url = await generateCard(payload)
+      const url = await generateCard(formData)
+      // const url = await generateCard(payload)
       setGeneratedUrl(url)
       setShowDialog(true)
       showNotification('success', '¡Tarjeta generada con éxito!')
@@ -167,11 +167,11 @@ const CardLayout = () => {
       />
 
       <Toast ref={toast} />
-      <ReCAPTCHA
+      {/* <ReCAPTCHA
         sitekey={RECAPTCHA_SITE_KEY}
         size="invisible"
         ref={recaptchaRef}
-      />
+      /> */}
       <div className="justify-content-center p-4">
         <h1 className="text-lg font-semibold mb-3">
           Bienvenido a TarjetaGratis
@@ -182,11 +182,32 @@ const CardLayout = () => {
           datos, genera el código y comparte tu invitación al instante. También
           puedes personalizarla fácilmente para que sea única.
         </p>
+        <p className="text-sm text-gray-600 mt-4">
+          Esta aplicación está en fase de pruebas. La publiqué online para poder
+          verla en mi celular y probar su funcionamiento. La información de cada
+          tarjeta se guarda por un máximo de un mes, y se recomienda
+          compartirlas con una anticipación no mayor a una semana. El uso es
+          totalmente gratuito y sin garantía: no me responsabilizo por pérdidas
+          de datos ni funcionamiento incorrecto. Se utiliza bajo propia
+          responsabilidad.
+          <br />
+          <br />
+          Si querés reportar un fallo, proponer ideas o simplemente colaborar,
+          visitá la sección <strong>About</strong> y agregame a&nbsp;
+          <a
+            href="https://www.linkedin.com/in/exequiel-sabatie/"
+            target="_blank"
+            className="underline text-blue-500"
+          >
+            LinkedIn
+          </a>
+          .
+        </p>
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-column md:flex-row justify-content-center p-4">
-          <div className="card flex justify-content-center border-1 border-dashed border-round-lg block md:hidden">
+        <div className="flex flex-column md:flex-row justify-content-center p-3">
+          <div className="card flex justify-content-center border-1 border-round-lg block md:hidden">
             <Button
               type="button"
               className="bg-green-200 w-full"
@@ -194,17 +215,16 @@ const CardLayout = () => {
               onClick={() => setVisible(true)}
             />
             <Sidebar
-              className="bg-verde border-1 border-dashed"
+              className="bg-verde border-1"
               visible={visible}
               onHide={() => setVisible(false)}
-              blockScroll
               position="left"
             >
               <Armador formData={formData} setFormData={setFormData} />
             </Sidebar>
           </div>
 
-          <div className="border-1 border-dashed border-round-lg hidden md:block col-4">
+          <div className="border-1 border-round-lg hidden md:block col-4">
             <Armador formData={formData} setFormData={setFormData} />
           </div>
           <div className="col-12 md:col-6 centrado">
@@ -229,7 +249,7 @@ const CardLayout = () => {
               {generatedUrl && (
                 <div>
                   <InputText
-                    value={generatedUrl || ''}
+                    value={`${config.VITE_URL}${generatedUrl}` || ''}
                     placeholder="Generando..."
                     readOnly
                     className="text-center w-full"
@@ -269,7 +289,7 @@ const CardLayout = () => {
                       severity="success"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${generatedUrl}`
+                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
                         )
                         window.open(`https://wa.me/?text=${text}`, '_blank')
                       }}
@@ -286,7 +306,7 @@ const CardLayout = () => {
                       severity="info"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${generatedUrl}`
+                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
                         )
                         window.open(
                           `https://t.me/share/url?url=${generatedUrl}&text=${text}`,

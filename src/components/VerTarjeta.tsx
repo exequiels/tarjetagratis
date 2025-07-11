@@ -40,7 +40,7 @@ const VerTarjeta = () => {
     )
 
   return (
-    <div className="flex justify-content-center align-items-center min-h-screen">
+    <div className="flex justify-content-center align-items-center min-h-screen p-3">
       <SEO
         title="¡Te invito a mi cumple! ✨ | TarjetaGratis"
         description="Crea invitaciones digitales gratis y personalizadas para cumpleaños infantiles. ¡Mágicas, rápidas y sin registros!"

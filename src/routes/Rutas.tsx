@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import CardLayout from '../components/layouts/CardLayout'
 import VerTarjeta from '../components/VerTarjeta'
 import About from '../pages/About'
-import FullLayout from '../components/layouts/fullLayout'
-import SimpleLayout from '../components/layouts/simpleLayout'
+import FullLayout from '../components/layouts/FullLayout'
+import SimpleLayout from '../components/layouts/SimpleLayout'
 
 const Rutas = () => {
   return (

@@ -247,7 +247,7 @@ const Tarjeta = ({
       <a
         href="https://tarjetagratis.com/"
         target="_blank"
-        className="underline mt-3 text-blue-500"
+        className="underline mt-2 text-blue-500"
       >
         Crear una tarjeta
       </a>
