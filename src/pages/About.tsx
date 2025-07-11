@@ -14,30 +14,32 @@ const About = () => {
           <h1 className="text-4xl font-bold">Hola, soy Exequiel</h1>
 
           <p className="text-lg mt-4">
-            Ex pintor de autos reconvertido en desarrollador a los 37. Elijo la
-            tecnología como camino para crear con propósito, aprender sin pausa
-            y construir comunidad. Si sentís afinidad con esto, me encantaría
-            conocerte.
+            Fui pintor de autos hasta que, a los 37 años, decidí reinventarme
+            como desarrollador. Elijo creer que todo suma, incluso los proyectos
+            que nadie ve o que no generan impacto aparente. Para mí, significan
+            calma y el disfrute de recorrer un camino largo, lleno de
+            aprendizajes, donde todavía queda mucha aventura por descubrir. Si
+            sentís afinidad con esto, me encantaría conocerte.
           </p>
 
           <ul className="list-disc text-left px-5 space-y-2 text-base mt-4">
             <li>
-              <strong>Mentores</strong> que me desafíen técnicamente y den
-              feedback honesto
+              <strong>Mentores</strong> que puedan acompañarme con feedback
+              honesto — quiero profundizar en la nube y explorar más sobre
+              inteligencia artificial.
             </li>
-            <li>Espacios donde la creatividad rompa convenciones</li>
-            <li>Ideas locas con propósito, bienvenidas</li>
-            <li>Crecimiento que nace de la colaboración genuina</li>
-            <li>Aprender en comunidad y construir algo juntos</li>
-            <li>Conexiones humanas antes que facturación</li>
             <li>
-              Superar el síndrome del impostor compartiendo, no compitiendo
+              Espacios donde la creatividad rompa estructuras y normas
+              predecibles
             </li>
+            <li>Ideas locas con propósito: siempre bienvenidas</li>
+            <li>Crecimiento genuino, fruto de la colaboración</li>
+            <li>Conexiones humanas por encima de métricas o facturación</li>
           </ul>
 
           <p className="text-base mt-4">
-            Si tenés una idea, proyecto o simplemente querés charlar sobre
-            código o tecnología, sumame en&nbsp;
+            Si tenés una idea, un proyecto, o simplemente querés charlar sobre
+            tecnología o desarrollo, escribime por&nbsp;
             <a
               href="https://www.linkedin.com/in/exequiel-sabatie/"
               target="_blank"
@@ -49,18 +51,18 @@ const About = () => {
           </p>
 
           <p className="text-lg mt-5">
-            Hoy, a los 41, creé <strong>tarjetagratis.com</strong> como excusa
-            para practicar Context API en React y ofrecer a padres una forma de
-            crear invitaciones mágicas para sus hijos. Sigo aprendiendo y
-            buscando colaborar en proyectos que me desafíen.
+            Hoy, con 41 años, lancé <strong>tarjetagratis.com</strong>: un
+            proyecto hecho con React y Context API, pensado como una excusa para
+            seguir aprendiendo, mientras ofrezco a madres y padres una forma
+            simple y mágica de crear invitaciones personalizadas para sus hijos.
           </p>
+
           <p className="text-lg mt-5">
-            Este proyecto y mi carrera como desarrollador no serían posibles sin
-            el apoyo incondicional de mi familia. Gracias a mi pareja e hijos
-            por su paciencia durante las largas horas de aprendizaje y
-            desarrollo. Su comprensión cuando estoy inmerso en el código es, sin
-            duda, mi mayor motor.
+            Nada de esto sería posible sin el apoyo incondicional de mi familia.
+            Gracias por acompañarme con paciencia y amor en cada línea de
+            código.
           </p>
+
           <h2 className="text-2xl font-semibold mt-6">
             Tecnologías utilizadas
           </h2>

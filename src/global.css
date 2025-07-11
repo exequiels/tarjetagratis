@@ -22,6 +22,8 @@ body {
   --font-size-base: 22px;
   --footer: #282e38;
 
+  font-family: sans-serif;
+
   /* ENLACES */
   --a-color: #fd8975;
   --a-hover: #fd8975;

@@ -306,10 +306,10 @@ export const plantillas = [
       direccionDecoration: 'decoration-sombraDifusa-white',
 
       /* Tamaños */
-      nombreSize: 'text-10xl',
-      cuantosSize: 'text-7xl',
+      nombreSize: 'text-8xl',
+      cuantosSize: 'text-6xl',
       cuandoSize: 'text-6xl',
-      horarioSize: 'text-4xl',
+      horarioSize: 'text-2xl',
       direccionSize: 'text-xl',
 
       /* Animaciones */

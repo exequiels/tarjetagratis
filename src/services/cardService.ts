@@ -18,7 +18,12 @@ export const generateCard = async (formData: CardFormData): Promise<string> => {
       const errorMessages = Object.values(result.errors).flat()
       throw new Error(errorMessages.join(', '))
     }
-    throw new Error(result.error || 'Error creating card')
+    if (response.status === 429) {
+      throw new Error(
+        result.message || 'Demasiadas solicitudes, por favor esperá un momento.'
+      )
+    }
+    throw new Error(result.error || 'Error creando tarjeta')
   }
 
   return result.url
