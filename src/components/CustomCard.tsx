@@ -53,13 +53,9 @@ const CustomCard = ({
   horarioAlinear,
   direccionAlinear,
 }: CardFormData) => {
-  // const getClasses = (color: string, decoration: string, size: string) => {
-  //   return [color, decoration, size]
-  //     .filter((cls) => cls && typeof cls === 'string' && cls.trim() !== '')
-  //     .join(' ')
-  //     .trim()
-  // }
   const [isTaped, setIsTaped] = useState(false)
+  const distribucion = cuantosDistribucion ?? 'row'
+
   const getClasses = (
     color: string,
     decoration: string,
@@ -84,7 +80,9 @@ const CustomCard = ({
 
   return (
     <div
-      className={`centrado w-full tarjeta-3d ${isTaped ? 'active' : ''}`}
+      className={`border-1 border-dashed p-0 md:p-4 centrado w-full tarjeta-3d ${
+        isTaped ? 'active' : ''
+      }`}
       onClick={() => setIsTaped(!isTaped)}
       style={{ fontFamily: fuente }}
     >
@@ -146,23 +144,11 @@ const CustomCard = ({
               </div>
 
               {/* Cuantos */}
-              {/* <div
-                className={`flex ${
-                  isCuantosReversed ? 'flex-row-reverse' : 'flex-row'
-                } w-full ${
-                  nombreOrden === 'flex-order-0'
-                    ? 'flex-order-1'
-                    : nombreOrden === 'flex-order-1'
-                    ? 'flex-order-0'
-                    : 'flex-order-1'
-                }`}
-                style={{ flexBasis: '40%', flexShrink: 0, flexGrow: 0 }}
-              > */}
               <div
                 className={`flex ${
                   isCuantosReversed
-                    ? `flex-${cuantosDistribucion}-reverse`
-                    : `flex-${cuantosDistribucion}`
+                    ? `flex-${distribucion}-reverse`
+                    : `flex-${distribucion}`
                 } w-full ${
                   nombreOrden === 'flex-order-0'
                     ? 'flex-order-1'
@@ -172,12 +158,9 @@ const CustomCard = ({
                 }`}
                 style={{ flexBasis: '40%', flexShrink: 0, flexGrow: 0 }}
               >
-                {/* <div
-                  className={`col-6 flex ${cuantosAlinear} justify-content-center`}
-                > */}
                 <div
                   className={`${
-                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                    distribucion === 'column' ? 'w-full' : 'col-6'
                   } flex ${cuantosAlinear} justify-content-center`}
                 >
                   <span
@@ -196,7 +179,7 @@ const CustomCard = ({
                 {/* <div className="col-6 flex flex-column"> */}
                 <div
                   className={`${
-                    cuantosDistribucion === 'column' ? 'w-full' : 'col-6'
+                    distribucion === 'column' ? 'w-full' : 'col-6'
                   } flex flex-column`}
                 >
                   {/* Cuando */}
