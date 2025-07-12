@@ -172,24 +172,23 @@ const CardLayout = () => {
         size="invisible"
         ref={recaptchaRef}
       /> */}
-      <div className="justify-content-center p-4">
-        <h1 className="text-lg font-semibold mb-3">
+      <div className="justify-content-center p-4 bg-white">
+        <h1 className="text-xl font-semibold mb-3">
           Bienvenido a TarjetaGratis
         </h1>
-        <p className="text-base">
+        <h2 className="text-lg">
           Crea invitaciones digitales personalizadas para cumpleaños y eventos
           especiales de forma fácil y gratuita. Elige una plantilla, edita los
           datos, genera el código y comparte tu invitación al instante. También
           puedes personalizarla fácilmente para que sea única.
-        </p>
-        <p className="text-sm text-gray-600 mt-4">
+        </h2>
+        <p className="text-base mt-4">
           Esta aplicación está en fase de pruebas. La publiqué online para poder
-          verla en mi celular y probar su funcionamiento. La información de cada
-          tarjeta se guarda por un máximo de un mes, y se recomienda
-          compartirlas con una anticipación no mayor a una semana. El uso es
-          totalmente gratuito y sin garantía: no me responsabilizo por pérdidas
-          de datos ni funcionamiento incorrecto. Se utiliza bajo propia
-          responsabilidad.
+          probar su funcionamiento. La información de cada tarjeta se guarda por
+          un máximo de un mes, y se recomienda compartirlas con una anticipación
+          no mayor a ese mes. El uso es totalmente gratuito y sin garantía: no
+          me responsabilizo por pérdidas de datos ni funcionamiento incorrecto.
+          Se utiliza bajo propia responsabilidad.
           <br />
           <br />
           Si querés reportar un fallo, proponer ideas o simplemente colaborar,
