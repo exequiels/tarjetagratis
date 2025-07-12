@@ -11,9 +11,9 @@ import DropdownCuantosOrden from './estilos/DropdownCuantosOrden'
 import DropdownAlinear from './estilos/DropdownAlinear'
 import DropdownPlantillas from './estilos/DropdownPlantillas'
 import DropdownAnimar from './estilos/DropdownAnimar'
-import { OverlayPanel } from 'primereact/overlaypanel'
+import { Dialog } from 'primereact/dialog'
 import { Button } from 'primereact/button'
-import { useCallback, useRef } from 'react'
+import { useCallback, useState } from 'react'
 import DropdownCuantosDistribucion from './estilos/DropdownCuantosDistribucion'
 
 type ArmadorProps = {
@@ -22,6 +22,8 @@ type ArmadorProps = {
 }
 
 const Armador = ({ formData, setFormData }: ArmadorProps) => {
+  const [visibleDialog, setVisibleDialog] = useState<string | null>(null)
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value })
   }
@@ -59,8 +61,6 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
     setFormData({ ...formData, [alinearKey]: alinearValue })
   }
 
-  const ops = useRef<(OverlayPanel | null)[]>([])
-
   return (
     <>
       <div className="p-3 bg-white border-round-lg">
@@ -85,10 +85,11 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
           />
         </div>
       </div>
-      {opcionesArmador.map((opcion, i) => (
+
+      {opcionesArmador.map((opcion) => (
         <div className="mt-4" key={opcion.id}>
           <label htmlFor={opcion.id}>{opcion.label}</label>
-          <div className="flex align-items-center gap-2" key={opcion.id}>
+          <div className="flex align-items-center gap-2">
             <InputText
               id={opcion.id}
               value={formData[opcion.id as keyof CardFormData] || ''}
@@ -108,15 +109,23 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
             <Button
               className="p-3 bg-green-200"
               type="button"
-              icon="pi pi-angle-down"
-              onClick={(e) => ops.current[i]?.toggle(e)}
+              icon="pi pi-cog"
+              onClick={() => setVisibleDialog(opcion.id)}
             />
-            <OverlayPanel
-              ref={(el) => {
-                ops.current[i] = el
-              }}
-            >
-              <div className="flex flex-column xs:flex-row">
+          </div>
+
+          <Dialog
+            header={`Configurar ${opcion.label}`}
+            visible={visibleDialog === opcion.id}
+            onHide={() => setVisibleDialog(null)}
+            style={{ width: '50vw' }}
+            breakpoints={{ '960px': '75vw', '641px': '90vw' }}
+            modal
+            draggable={false}
+            resizable={false}
+          >
+            <div className="p-3">
+              <div className="flex flex-column xs:flex-row gap-2">
                 <DropdownColor
                   value={
                     (formData[
@@ -160,6 +169,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                   }
                 />
               </div>
+
               {(opcion.id === 'nombre' ||
                 opcion.id === 'cuantos' ||
                 [
@@ -182,18 +192,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                       }
                     />
                   )}
-                  {/* {opcion.id === 'cuantos' && (
-                    <DropdownCuantosOrden
-                      value={
-                        (formData[
-                          `${opcion.id}Orden` as keyof CardFormData
-                        ] as string) || ''
-                      }
-                      onChange={(orderValue) =>
-                        handleOrderChange(opcion.id, orderValue)
-                      }
-                    />
-                  )} */}
+
                   {opcion.id === 'cuantos' && (
                     <>
                       <DropdownCuantosOrden
@@ -238,8 +237,8 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                   )}
                 </div>
               )}
-            </OverlayPanel>
-          </div>
+            </div>
+          </Dialog>
         </div>
       ))}
     </>

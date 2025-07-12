@@ -18,11 +18,9 @@ body {
   /* ARMADOR */
   --bg: #f0f7d5;
   --color: black;
-  --font: 'Brush Script', cursive;
+  --font: 'sans-serif';
   --font-size-base: 22px;
   --footer: #282e38;
-
-  font-family: sans-serif;
 
   /* ENLACES */
   --a-color: #fd8975;
