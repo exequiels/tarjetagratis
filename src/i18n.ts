@@ -19,8 +19,13 @@ import fondosEN from './traducciones/en/fondos.json'
 import fondosES from './traducciones/es/fondos.json'
 
 const getInitialLanguage = () => {
-  const hostname = window.location.hostname
+  const browserLang = navigator.language || navigator.languages?.[0] || 'es'
 
+  if (browserLang.startsWith('en')) {
+    return 'en'
+  }
+
+  const hostname = window.location.hostname
   if (hostname.includes('magickidscards.com')) {
     return 'en'
   }
@@ -29,8 +34,7 @@ const getInitialLanguage = () => {
     return 'es'
   }
 
-  const browserLang = navigator.language || navigator.languages?.[0] || 'es'
-  return browserLang.startsWith('en') ? 'en' : 'es'
+  return 'es'
 }
 
 i18n.use(initReactI18next).init({

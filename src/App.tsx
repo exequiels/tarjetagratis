@@ -5,7 +5,7 @@ import 'primeflex/primeflex.css'
 import { PrimeReactProvider } from 'primereact/api'
 import { BrowserRouter } from 'react-router-dom'
 import Rutas from './routes/Rutas'
-import { LanguageProvider } from './context/LanguageContext'
+
 import './i18n'
 
 function App() {
@@ -15,11 +15,9 @@ function App() {
   return (
     <>
       <PrimeReactProvider value={value}>
-        <LanguageProvider>
-          <BrowserRouter>
-            <Rutas />
-          </BrowserRouter>
-        </LanguageProvider>
+        <BrowserRouter>
+          <Rutas />
+        </BrowserRouter>
       </PrimeReactProvider>
     </>
   )

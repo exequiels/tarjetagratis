@@ -100,8 +100,9 @@ const CardLayout = () => {
       return
     }
 
+    const fullUrl = `${config.VITE_URL}${generatedUrl}`
     navigator.clipboard
-      .writeText(generatedUrl)
+      .writeText(fullUrl)
       .then(() => {
         toast.current?.show({
           severity: 'success',
@@ -249,7 +250,7 @@ const CardLayout = () => {
               {generatedUrl && (
                 <div>
                   <InputText
-                    value={`${generatedUrl}` || ''}
+                    value={`${config.VITE_URL}${generatedUrl}` || ''}
                     placeholder="Generando..."
                     readOnly
                     className="text-center w-full"
@@ -288,7 +289,9 @@ const CardLayout = () => {
                       severity="success"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
+                          `${t('mensaje_invitacion')} ${
+                            config.VITE_URL
+                          }${generatedUrl}`
                         )
                         window.open(`https://wa.me/?text=${text}`, '_blank')
                       }}
@@ -305,7 +308,9 @@ const CardLayout = () => {
                       severity="info"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
+                          `${t('mensaje_invitacion')} ${
+                            config.VITE_URL
+                          }${generatedUrl}`
                         )
                         window.open(
                           `https://t.me/share/url?url=${generatedUrl}&text=${text}`,
