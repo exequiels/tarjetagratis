@@ -1,0 +1,41 @@
+{
+  "seo": {
+    "title": "About Me – Creator of TarjetaGratis",
+    "description": "Meet Exequiel, the developer behind TarjetaGratis. A former auto painter turned programmer, looking to create, learn, and connect with a like-minded community.",
+    "keywords": "about me, web developer, React, story, community, digital invitations"
+  },
+  "titulo": "Hi, I'm Exe",
+  "presentacion": "I used to paint cars until, at 37, I decided to reinvent myself as a developer. I choose to believe that everything counts — that what I do makes a difference — even if it doesn’t create visible impact. To me, it brings calm and joy in walking a long road full of learning, with much more still to discover. If any of this resonates with you, scroll down to find my links — reach out, move, because I’m moving too.",
+  "lista": {
+    "mentores": "Mentors who can support me with honest feedback — I want to go deeper into cloud technologies and explore more about artificial intelligence.",
+    "creatividad": "Spaces where creativity breaks predictable structures and norms",
+    "ideas": "Crazy ideas with purpose: always welcome",
+    "colaboracion": "Genuine growth, born from collaboration",
+    "conexion": "Human connections over metrics or revenue"
+  },
+  "invitacion_contacto": "If you have an idea, a project, or just want to chat about tech or development, reach out on",
+  "linkedin": "LinkedIn",
+  "lanzamiento": "At 41, I launched tarjetagratis.com — a project built with React and Context API, meant as an excuse to keep learning while offering an alternative to what's out there.",
+  "tecnologias_titulo": "Technologies used",
+  "tecnologias": {
+    "stack": "React, TypeScript and Laravel",
+    "primereact": "PrimeReact: a modern and accessible component library.",
+    "animate": "Animate.css: smooth animations for text and elements.",
+    "hover_effect": "3D card effect: inspired by the WebDev Diaries – Bird Hover Effect video.",
+    "fuentes": "Fonts: all from Google Fonts",
+    "imagenes": "Images and backgrounds: generated with Google AI Studio"
+  },
+  "nota_legal": "All license files are included within the project.",
+  "agradecimiento": {
+    "familia": "None of this would be possible without the unconditional support of my family. Time simply flies.",
+    "parrafo": "One day I decided to show up — time to share what I do and meet like-minded people.",
+    "lista_titulo": "Key Reddit contributions:",
+    "usuarios": [
+      "u/L3monPi3 — suggested adding a donation link (cafecito). I'm trying to register; I added a switch2 just in case someone wants to support.",
+      "u/treintaytres — recommended creating a Twitter/X account, and it felt important to track and share my progress.",
+      "u/Pablete01 — made me realize the importance of the marketing vibe. His advice not to disorient users with strong UI changes was fundamental.",
+      "u/Prestigious_Towel_18 — suggested adding thumbnails to background images."
+    ],
+    "agradecimiento_general": "I also want to thank everyone who replied with good vibes — both online and off."
+  }
+}

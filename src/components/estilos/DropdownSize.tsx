@@ -1,26 +1,29 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { Props } from '../../types/Props'
+import { useTranslation } from 'react-i18next'
 
 type DropdownSizeProps = Props & {
   fieldId: string
 }
 
 const DropdownSize = ({ value, onChange, fieldId }: DropdownSizeProps) => {
+  const { t } = useTranslation('dropdown')
+
   const baseOptions = [
-    { label: 'Compacto', value: 'text-xl' },
-    { label: 'Normal', value: 'text-2xl' },
-    { label: 'Grande', value: 'text-4xl' },
-    { label: 'Gigante', value: 'text-6xl' },
+    { label: t('size.compact'), value: 'text-xl' },
+    { label: t('size.normal'), value: 'text-2xl' },
+    { label: t('size.large'), value: 'text-4xl' },
+    { label: t('size.giant'), value: 'text-6xl' },
   ]
 
   const extraOption = [
-    { label: 'Bestial', value: 'text-7xl' },
-    { label: 'Demencial', value: 'text-8xl' },
-    { label: 'Colosal', value: 'text-10xl' },
-    { label: 'Épico', value: 'text-12xl' },
+    { label: t('size.beast'), value: 'text-7xl' },
+    { label: t('size.crazy'), value: 'text-8xl' },
+    { label: t('size.colossal'), value: 'text-10xl' },
+    { label: t('size.epic'), value: 'text-12xl' },
   ]
 
-  const legendariaOption = [{ label: 'Legendaria', value: 'text-18xl' }]
+  const legendariaOption = [{ label: t('size.legendary'), value: 'text-18xl' }]
 
   const sizeOptions =
     fieldId === 'cuantos'
@@ -33,7 +36,7 @@ const DropdownSize = ({ value, onChange, fieldId }: DropdownSizeProps) => {
     <div className="flex justify-content-between align-items-center mt-2 p-3 bg-verde border-round-lg">
       <div>
         <label htmlFor="size" className="text-lg">
-          Tamaño:{' '}
+          {t('size.label')}
         </label>
       </div>
       <Dropdown
@@ -41,7 +44,7 @@ const DropdownSize = ({ value, onChange, fieldId }: DropdownSizeProps) => {
         value={value}
         options={sizeOptions}
         onChange={(e) => onChange(e.value)}
-        placeholder="Tamaño"
+        placeholder={t('size.placeholder')}
         itemTemplate={(option) => <div>{option.label}</div>}
         className="mt-2"
       />

@@ -1,24 +1,13 @@
-export const opcionesArmador = [
-  {
-    id: 'nombre',
-    label: 'Nombre del Cumpleañero?',
-    placeholder: 'Ej: Pepito..',
-  },
-  {
-    id: 'cuantos',
-    label: 'Cuantos años cumple?',
-    placeholder: 'Ej: 10 años..',
-  },
-  // {
-  //   id: 'frase',
-  //   label: 'Frase de invitacion:',
-  //   placeholder: 'Ej: Te invito a mi Cumple!!..',
-  // },
-  { id: 'cuando', label: 'Cuando?', placeholder: 'Ej: El 1 de abril..' },
-  { id: 'horario', label: 'Horario:', placeholder: 'Ej: 17:00hs a 20:00hs..' },
+import type { TFunction } from 'i18next'
+
+export const getOpcionesArmador = (t: TFunction) => [
+  { id: 'nombre', label: t('nombre'), placeholder: t('placeholderNombre') },
+  { id: 'cuantos', label: t('cuantos'), placeholder: t('placeholderCuantos') },
+  { id: 'cuando', label: t('cuando'), placeholder: t('placeholderCuando') },
+  { id: 'horario', label: t('horario'), placeholder: t('placeholderHorario') },
   {
     id: 'direccion',
-    label: 'Dirección?',
-    placeholder: 'Ej: En mi casa, Boulevard 123..',
+    label: t('direccion'),
+    placeholder: t('placeholderDireccion'),
   },
 ]

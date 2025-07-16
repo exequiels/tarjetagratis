@@ -1,0 +1,11 @@
+{
+  "titulo_personalizado": "{{nombre}}'s Birthday!",
+  "titulo_generico": "You're invited to my party!",
+  "seo": {
+    "titulo": "You're invited to my birthday! ✨ | TarjetaGratis",
+    "descripcion": "Create free and personalized digital invitations for kids' birthdays. Magical, quick, and no sign-up needed!",
+    "keywords": "kids invitation, birthday card, digital birthday, free invitation"
+  },
+  "crear_tarjeta": "Create a card",
+  "crear_tarjeta_url": "https://tarjetagratis.com/"
+}

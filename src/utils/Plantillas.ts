@@ -1,19 +1,74 @@
+import type { TFunction } from 'i18next'
 import type { CardFormData } from '../types/CardFormData'
 
-export const plantillas = [
+export const getPlantillas = (t: TFunction) => [
   {
-    label: 'Cumple de Campanita',
+    label: t('base.label', { ns: 'plantillas' }),
+    value: {
+      /* Globales */
+      fondo: '/images/blank.png',
+      fuente: 'Arial, sans-serif',
+
+      /* Inputs */
+      nombre: t('base.nombre', { ns: 'plantillas' }),
+      cuantos: t('base.cuantos', { ns: 'plantillas' }),
+      cuando: t('base.cuando', { ns: 'plantillas' }),
+      horario: t('base.horario', { ns: 'plantillas' }),
+      direccion: t('base.direccion', { ns: 'plantillas' }),
+
+      /* Colores */
+      nombreColor: 'text-gray-700',
+      cuantosColor: 'text-gray-700',
+      cuandoColor: 'text-gray-700',
+      horarioColor: 'text-gray-700',
+      direccionColor: 'text-gray-700',
+
+      /* Decoraciones */
+      nombreDecoration: '',
+      cuantosDecoration: '',
+      cuandoDecoration: '',
+      horarioDecoration: '',
+      direccionDecoration: '',
+
+      /* Tamaños */
+      nombreSize: 'text-xl',
+      cuantosSize: 'text-xl',
+      cuandoSize: 'text-xl',
+      horarioSize: 'text-xl',
+      direccionSize: 'text-xl',
+
+      /* Animaciones */
+      nombreAnimar: '',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
+
+      /* Orden */
+      nombreOrden: 'flex-order-0',
+      cuantosOrden: 'flex-row-reverse',
+
+      /* Alineaciones */
+      nombreAlinear: 'align-items-end',
+      cuantosAlinear: 'align-items-center',
+      cuandoAlinear: 'align-items-end',
+      horarioAlinear: 'align-items-start',
+      direccionAlinear: 'align-items-start',
+    } as CardFormData,
+  },
+  {
+    label: t('campanita.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/videos/hadas_marco_01_mov.mp4',
       fuente: 'HennyPenny, cursive',
 
       /* Inputs */
-      nombre: 'Campanita',
-      cuantos: '6 años',
-      cuando: 'Viernes 12 de Julio',
-      horario: '18 a 20hs',
-      direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
+      nombre: t('campanita.nombre', { ns: 'plantillas' }),
+      cuantos: t('campanita.cuantos', { ns: 'plantillas' }),
+      cuando: t('campanita.cuando', { ns: 'plantillas' }),
+      horario: t('campanita.horario', { ns: 'plantillas' }),
+      direccion: t('campanita.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-cyan-500',
@@ -56,19 +111,18 @@ export const plantillas = [
     } as CardFormData,
   },
   {
-    label: 'Cumple de Carlitos',
+    label: t('carlitos.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/images/dinosaurios_01.png',
       fuente: 'CalSans, sans-serif',
 
       /* Inputs */
-      nombre: 'CARLITOS',
-      cuantos: '7',
-
-      cuando: 'Viernes 25 de Agosto',
-      horario: '16:30hs a 20:30hs',
-      direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
+      nombre: t('carlitos.nombre', { ns: 'plantillas' }),
+      cuantos: t('carlitos.cuantos', { ns: 'plantillas' }),
+      cuando: t('carlitos.cuando', { ns: 'plantillas' }),
+      horario: t('carlitos.horario', { ns: 'plantillas' }),
+      direccion: t('carlitos.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-orange-500',
@@ -112,19 +166,18 @@ export const plantillas = [
     } as CardFormData,
   },
   {
-    label: 'Cumple de Dieguito',
+    label: t('dieguito.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/videos/argentina_futbol_marco_mov.mp4',
       fuente: 'LoveYaLikeASister, cursive',
 
       /* Inputs */
-      nombre: 'Dieguito',
-      cuantos: '10',
-
-      cuando: 'Viernes 30 de Octubre',
-      horario: '18pm',
-      direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
+      nombre: t('dieguito.nombre', { ns: 'plantillas' }),
+      cuantos: t('dieguito.cuantos', { ns: 'plantillas' }),
+      cuando: t('dieguito.cuando', { ns: 'plantillas' }),
+      horario: t('dieguito.horario', { ns: 'plantillas' }),
+      direccion: t('dieguito.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-blue-500',
@@ -168,18 +221,18 @@ export const plantillas = [
     } as CardFormData,
   },
   {
-    label: 'Cumple de Margarita',
+    label: t('margarita.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/images/mundo_marino_03.png',
       fuente: 'Kablammo, cursive',
 
       /* Inputs */
-      nombre: 'Margarita',
-      cuantos: '3',
-      cuando: 'Lunes 02 de Abril',
-      horario: '12pm',
-      direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
+      nombre: t('margarita.nombre', { ns: 'plantillas' }),
+      cuantos: t('margarita.cuantos', { ns: 'plantillas' }),
+      cuando: t('margarita.cuando', { ns: 'plantillas' }),
+      horario: t('margarita.horario', { ns: 'plantillas' }),
+      direccion: t('margarita.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-green-500',
@@ -223,18 +276,18 @@ export const plantillas = [
     } as CardFormData,
   },
   {
-    label: 'Cumple de Neil',
+    label: t('neil.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/images/espacio_01.png',
       fuente: 'RubikMoonrocks, sans-serif',
 
       /* Inputs */
-      nombre: 'Neil',
-      cuantos: '9',
-      cuando: '05/08',
-      horario: '14:45hs..',
-      direccion: 'Calle Cualquiera 123, Ciudad Lunar',
+      nombre: t('neil.nombre', { ns: 'plantillas' }),
+      cuantos: t('neil.cuantos', { ns: 'plantillas' }),
+      cuando: t('neil.cuando', { ns: 'plantillas' }),
+      horario: t('neil.horario', { ns: 'plantillas' }),
+      direccion: t('neil.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-purple-500',
@@ -278,18 +331,18 @@ export const plantillas = [
     } as CardFormData,
   },
   {
-    label: 'Halloween de Tomy',
+    label: t('tomy.label', { ns: 'plantillas' }),
     value: {
       /* Globales */
       fondo: '/images/halloween_04.png',
       fuente: 'Eater, cursive',
 
       /* Inputs */
-      nombre: 'Tomy',
-      cuantos: '10 Años',
-      cuando: '05/08',
-      horario: '15:30hs a 21:00hs',
-      direccion: 'Calle Cualquiera 123, Ciudad Lunar',
+      nombre: t('tomy.nombre', { ns: 'plantillas' }),
+      cuantos: t('tomy.cuantos', { ns: 'plantillas' }),
+      cuando: t('tomy.cuando', { ns: 'plantillas' }),
+      horario: t('tomy.horario', { ns: 'plantillas' }),
+      direccion: t('tomy.direccion', { ns: 'plantillas' }),
 
       /* Colores */
       nombreColor: 'text-red-500',

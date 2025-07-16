@@ -5,8 +5,10 @@ import type { CardFormData } from '../types/CardFormData'
 import config from '../config'
 import SEO from './SEO'
 import { ProgressSpinner } from 'primereact/progressspinner'
+import { useTranslation } from 'react-i18next'
 
 const VerTarjeta = () => {
+  const { t } = useTranslation('verTarjeta')
   const { code } = useParams<{ code: string }>()
   const shortCode = code?.split('-')[0] || ''
   const [cardData, setCardData] = useState<CardFormData | null>(null)
@@ -24,11 +26,11 @@ const VerTarjeta = () => {
 
   useEffect(() => {
     if (cardData?.nombre) {
-      document.title = `Cumple de ${cardData.nombre}!`
+      document.title = t('titulo_personalizado', { nombre: cardData.nombre })
     } else {
-      document.title = 'Estas invitado a mi cumple!'
+      document.title = t('titulo_generico')
     }
-  }, [cardData])
+  }, [cardData, t])
 
   if (!cardData)
     return (
@@ -42,11 +44,12 @@ const VerTarjeta = () => {
   return (
     <div className="flex justify-content-center align-items-center min-h-screen p-3">
       <SEO
-        title="¡Te invito a mi cumple! ✨ | TarjetaGratis"
-        description="Crea invitaciones digitales gratis y personalizadas para cumpleaños infantiles. ¡Mágicas, rápidas y sin registros!"
+        title={t('seo.titulo')}
+        description={t('seo.descripcion')}
         canonicalUrl="https://tarjetagratis.com/tarjeta"
-        keywords="invitación infantil, tarjeta de cumpleaños, cumpleaños digital, tarjeta gratis"
+        keywords={t('seo.keywords')}
       />
+
       <Tarjeta {...cardData} />
     </div>
   )

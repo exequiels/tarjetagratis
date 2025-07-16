@@ -1,34 +1,36 @@
+import i18n from '../i18n' // Asegurate del path correcto a tu instancia
 import type { CardFormData } from '../types/CardFormData'
 
 export function validaciones(data: CardFormData): string[] {
+  const t = i18n.t
   const errores: string[] = []
 
   if (!data.fondo?.trim()) {
-    errores.push('Debe seleccionar un fondo.')
+    errores.push(t('fondo', { ns: 'validaciones' }))
   }
 
   if (!data.fuente?.trim()) {
-    errores.push('Debe seleccionar una fuente.')
+    errores.push(t('fuente', { ns: 'validaciones' }))
   }
 
   if (!data.nombre?.trim()) {
-    errores.push('El nombre es obligatorio.')
+    errores.push(t('nombre', { ns: 'validaciones' }))
   }
 
   if (!data.cuantos?.trim()) {
-    errores.push('La edad es obligatoria.')
+    errores.push(t('cuantos', { ns: 'validaciones' }))
   }
 
   if (!data.cuando?.trim()) {
-    errores.push('La fecha es obligatoria.')
+    errores.push(t('cuando', { ns: 'validaciones' }))
   }
 
   if (!data.horario?.trim()) {
-    errores.push('La hora es obligatoria.')
+    errores.push(t('horario', { ns: 'validaciones' }))
   }
 
   if (!data.direccion?.trim()) {
-    errores.push('La dirección es obligatoria.')
+    errores.push(t('direccion', { ns: 'validaciones' }))
   }
 
   return errores

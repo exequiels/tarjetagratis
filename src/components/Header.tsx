@@ -1,3 +1,5 @@
+// import DropdownIdioma from './estilos/DropdownIdioma'
+
 const Header = () => {
   return (
     <>
@@ -7,11 +9,13 @@ const Header = () => {
             <a href="/" className="underline">
               tarjetagratis.com
             </a>
+            {/* <DropdownIdioma /> */}
             <a href="/about" className="underline">
               About
             </a>
           </div>
         </div>
+        <div className="flex justify-content-end"></div>
       </div>
     </>
   )
