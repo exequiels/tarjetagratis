@@ -1,17 +1,13 @@
 {
   "seo": {
     "title": "Sobre mí - Creador de TarjetaGratis",
-    "description": "Conocé a Exequiel, desarrollador detrás de TarjetaGratis. Ex-pintor de autos reconvertido en programador que busca crear, aprender y conectar en comunidad.",
+    "description": "Estoy programando para aprender, crear y conectar en comunidad.",
     "keywords": "sobre mí, desarrollador web, React, historia, comunidad, tarjetas digitales"
   },
   "titulo": "Hola, soy Exe",
-  "presentacion": "Fui pintor de autos hasta que, a los 37 años, decidí reinventarme como desarrollador. Elijo creer que todo suma , que hago una diferencia, incluso los proyectos que no generan impacto aparente. Para mí, significan calma y el disfrute de recorrer un camino largo, lleno de aprendizajes, donde todavía me queda mucho por descubrir. Si sentís afinidad con esto al final de la pagina puse mis enlaces, buscame, movete que yo estoy en moviento.",
+  "presentacion": "Elijo creer que todo suma, que hago una diferencia, incluso los proyectos que no generan impacto aparente. Para mí, son un camino recorrido o a recorrer.",
   "lista": {
-    "mentores": "Mentores que puedan acompañarme con feedback honesto — quiero profundizar en la nube y explorar más sobre inteligencia artificial.",
-    "creatividad": "Espacios donde la creatividad rompa estructuras y normas predecibles",
-    "ideas": "Ideas locas con propósito: siempre bienvenidas",
-    "colaboracion": "Crecimiento genuino, fruto de la colaboración",
-    "conexion": "Conexiones humanas por encima de métricas o facturación"
+    "ideas": "Ideas locas con propósito: siempre bienvenidas"
   },
   "invitacion_contacto": "Si tenés una idea, un proyecto, o simplemente querés charlar sobre tecnología o desarrollo, escribime por",
   "linkedin": "LinkedIn",
@@ -19,23 +15,15 @@
   "tecnologias_titulo": "Tecnologías utilizadas",
   "tecnologias": {
     "stack": "React, TypeScript y Laravel",
-    "primereact": "PrimeReact: biblioteca de componentes moderna y accesible.",
-    "animate": "Animate.css: animaciones suaves para texto y elementos.",
+    "primereact": "PrimeReact: biblioteca de componentes.",
+    "animate": "Animate.css: animaciones de texto.",
     "hover_effect": "Efecto 3D de la tarjeta: inspirado en el video de WebDev Diaries - Bird Hover Effect.",
     "fuentes": "Fuentes: todas de Google Fonts",
     "imagenes": "Imágenes y fondos: generados con Google AI Studio"
   },
   "nota_legal": "Todos los archivos de licencia están incluidos dentro del proyecto.",
   "agradecimiento": {
-    "familia": "Nada de esto sería posible sin el apoyo incondicional de mi familia. El tiempo simplemente vuela.",
-    "parrafo": "Un día decidí participarque hora de empezar a mostrar lo que uno hace y conocer gente a fin.",
-    "lista_titulo": "Aportes destacados en Reddit:",
-    "usuarios": [
-      "u/L3monPi3 — sugirió que le ponga un cafecito. Estoy intentando registrarme, le puse una switch2 por si alguien quiere donar.",
-      "u/treintaytres — recomendó crearme un Twitter/X y me pareció importante para hacer seguimiento de lo que hago.",
-      "u/Pablete01 — me avivó con la onda publicitaria. Me parece fundamental su consejo de no descolocar al usuario con cambios fuertes.",
-      "u/Prestigious_Towel_18 — propuso ponerle thumbnails a los fondos."
-    ],
-    "agradecimiento_general": "También quiero agradecer a todas las personas que comentaron con buena onda en el post y por fuera de la internet también."
+    "familia": "El tiempo simplemente vuela. Gracias familia y gente con buena onda.",
+    "parrafo": "Un día decidí simplemente aparecer."
   }
 }

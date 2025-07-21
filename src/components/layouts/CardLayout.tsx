@@ -186,23 +186,7 @@ const CardLayout = () => {
           {t('nota_legal')}
           <br />
           <br />
-          {t('contacto')} <strong>About</strong> {t('enlace_linkedin_intro')}{' '}
-          <a
-            href="https://www.linkedin.com/in/exequiel-sabatie/"
-            target="_blank"
-            className="underline text-blue-500"
-          >
-            LinkedIn
-          </a>{' '}
-          o{' '}
-          <a
-            href="https://x.com/ExeRebootLife"
-            target="_blank"
-            className="underline text-blue-500"
-          >
-            Twitter
-          </a>
-          .
+          {t('contacto')} <strong>About</strong>.
         </p>
       </div>
 

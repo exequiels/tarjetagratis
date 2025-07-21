@@ -93,7 +93,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               type="button"
               icon="pi pi-image"
               onClick={() => setVisibleFondoPreview(true)}
-              tooltip={t('verPreview')}
+              tooltip={t('Preview')}
             />
           </div>
         </div>
@@ -109,13 +109,11 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
 
       {/* Dialog de Preview de Fondos */}
       <Dialog
-        header={t('selectBackground', 'Seleccionar Fondo')}
         visible={visibleFondoPreview}
         onHide={() => setVisibleFondoPreview(false)}
         style={{ width: '80vw', maxWidth: '1200px' }}
         breakpoints={{ '960px': '90vw', '641px': '95vw' }}
         modal
-        draggable={false}
         resizable={false}
         maximizable
       >
@@ -209,7 +207,6 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
             style={{ width: '50vw' }}
             breakpoints={{ '960px': '75vw', '641px': '90vw' }}
             modal
-            draggable={false}
             resizable={false}
           >
             <div className="p-3">
