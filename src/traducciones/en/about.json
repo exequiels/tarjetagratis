@@ -1,0 +1,29 @@
+{
+  "seo": {
+    "title": "About Me - Creator of TarjetaGratis",
+    "description": "I'm coding to learn, create, and connect with the community.",
+    "keywords": "about me, web developer, React, story, community, digital cards"
+  },
+  "titulo": "Hi, I'm Exe",
+  "presentacion": "I choose to believe that everything counts, that I make a difference—even the projects that don’t seem to have any apparent impact. For me, they’re part of the journey taken or yet to take.",
+  "lista": {
+    "ideas": "Crazy ideas with purpose: always welcome"
+  },
+  "invitacion_contacto": "If you have an idea, a project, or just want to chat about technology or development, message me on",
+  "linkedin": "LinkedIn",
+  "lanzamiento": "Today, at 41 years old, I launched tarjetagratis.com: a project made with React and Context API, conceived as an excuse to keep learning while offering an alternative to what’s out there.",
+  "tecnologias_titulo": "Technologies Used",
+  "tecnologias": {
+    "stack": "React, TypeScript, and Laravel",
+    "primereact": "PrimeReact: component library.",
+    "animate": "Animate.css: text animations.",
+    "hover_effect": "Card 3D effect: inspired by the WebDev Diaries video - Bird Hover Effect.",
+    "fuentes": "Fonts: all from Google Fonts",
+    "imagenes": "Images and backgrounds: generated with Google AI Studio"
+  },
+  "nota_legal": "All license files are included within the project.",
+  "agradecimiento": {
+    "familia": "Time simply flies. Thank you, family and people with good vibes.",
+    "parrafo": "One day I just decided to show up."
+  }
+}

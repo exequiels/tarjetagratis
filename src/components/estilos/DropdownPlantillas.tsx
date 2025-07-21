@@ -1,6 +1,7 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { CardFormData } from '../../types/CardFormData'
-import { plantillas } from '../../utils/Plantillas'
+import { getPlantillas } from '../../utils/Plantillas'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   value: CardFormData | null
@@ -8,21 +9,24 @@ type Props = {
 }
 
 const DropdownPlantillas = ({ onChange, value }: Props) => {
+  const { t } = useTranslation('dropdown')
+  const plantillas = getPlantillas(t)
+
   return (
     <div>
-      <label htmlFor="plantillas">Plantillas:</label>
+      <label htmlFor="plantillas">{t('plantillas.label')}</label>
       <Dropdown
         inputId="plantillas"
         filter
         filterIcon
         showFilterClear
         resetFilterOnHide
-        filterPlaceholder="Que buscas?"
-        emptyFilterMessage="No hay resultados para esa busqueda"
+        filterPlaceholder={t('plantillas.filterPlaceholder')}
+        emptyFilterMessage={t('plantillas.emptyMessage')}
         value={value}
         options={plantillas}
         onChange={(e) => onChange(e.value)}
-        placeholder="Elegí una plantilla"
+        placeholder={t('plantillas.placeholder')}
         optionLabel="label"
         className="w-full mt-2"
       />

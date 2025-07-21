@@ -1,11 +1,13 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { Props } from '../../types/Props'
 import { fontOptions } from '../../utils/OpcionesFuentes'
+import { useTranslation } from 'react-i18next'
 
 const DropdownFuente = ({ value, onChange }: Props) => {
+  const { t } = useTranslation('dropdown')
   return (
     <div>
-      <label htmlFor="fuente">Fuente: </label>
+      <label htmlFor="fuente">{t('fuente.label')}</label>
 
       <Dropdown
         inputId="fuente"
@@ -13,8 +15,8 @@ const DropdownFuente = ({ value, onChange }: Props) => {
         filterIcon
         showFilterClear
         resetFilterOnHide
-        filterPlaceholder="Que buscas?"
-        emptyFilterMessage="No hay resultados para esa busqueda"
+        filterPlaceholder={t('fuente.buscar_placeholder')}
+        emptyFilterMessage={t('fuente.mensaje_vacio')}
         value={value}
         options={fontOptions}
         onChange={(e) => onChange(e.value)}

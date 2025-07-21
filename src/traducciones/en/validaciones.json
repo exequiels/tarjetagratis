@@ -1,0 +1,9 @@
+{
+  "fondo": "You must select a background.",
+  "fuente": "You must select a font.",
+  "nombre": "Name is required.",
+  "cuantos": "Age is required.",
+  "cuando": "Date is required.",
+  "horario": "Time is required.",
+  "direccion": "Address is required."
+}

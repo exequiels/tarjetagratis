@@ -1,0 +1,9 @@
+{
+  "fondo": "Debe seleccionar un fondo.",
+  "fuente": "Debe seleccionar una fuente.",
+  "nombre": "El nombre es obligatorio.",
+  "cuantos": "La edad es obligatoria.",
+  "cuando": "La fecha es obligatoria.",
+  "horario": "La hora es obligatoria.",
+  "direccion": "La dirección es obligatoria."
+}

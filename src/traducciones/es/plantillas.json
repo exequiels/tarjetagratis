@@ -1,0 +1,58 @@
+{
+  "base": {
+    "label": "Base",
+    "nombre": "Wally",
+    "cuantos": "2 años",
+    "cuando": "05/08",
+    "horario": "21:00hs",
+    "direccion": "Calle 123"
+  },
+  "campanita": {
+    "label": "Cumple de Campanita",
+    "nombre": "Campanita",
+    "cuantos": "6 años",
+    "cuando": "Viernes 12 de Julio",
+    "horario": "18 a 20hs",
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
+  },
+  "carlitos": {
+    "label": "Cumple de Carlitos",
+    "nombre": "CARLITOS",
+    "cuantos": "7",
+    "cuando": "Viernes 25 de Agosto",
+    "horario": "16:30hs a 20:30hs",
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
+  },
+  "dieguito": {
+    "label": "Cumple de Dieguito",
+    "nombre": "Dieguito",
+    "cuantos": "10",
+    "cuando": "Viernes 30 de Octubre",
+    "horario": "18pm",
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
+  },
+  "margarita": {
+    "label": "Cumple de Margarita",
+    "nombre": "Margarita",
+    "cuantos": "3",
+    "cuando": "Lunes 02 de Abril",
+    "horario": "12pm",
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
+  },
+  "neil": {
+    "label": "Cumple de Neil",
+    "nombre": "Neil",
+    "cuantos": "9",
+    "cuando": "05/08",
+    "horario": "14:45hs..",
+    "direccion": "Calle Cualquiera 123, Ciudad Lunar"
+  },
+  "tomy": {
+    "label": "Halloween de Tomy",
+    "nombre": "Tomy",
+    "cuantos": "10 Años",
+    "cuando": "05/08",
+    "horario": "15:30hs a 21:00hs",
+    "direccion": "Calle Cualquiera 123, Ciudad Lunar"
+  }
+}
