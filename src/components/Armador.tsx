@@ -1,6 +1,6 @@
 import { InputText } from 'primereact/inputtext'
 import type { CardFormData } from '../types/CardFormData'
-import { opcionesArmador } from '../utils/OpcionesArmador'
+import { getOpcionesArmador } from '../utils/OpcionesArmador'
 import DropdownFondo from './estilos/DropdownFondo'
 import DropdownFuente from './estilos/DropdownFuente'
 import DropdownColor from './estilos/DropdownColor'
@@ -16,6 +16,7 @@ import { Button } from 'primereact/button'
 import { useCallback, useState } from 'react'
 import DropdownCuantosDistribucion from './estilos/DropdownCuantosDistribucion'
 import { fondos } from '../utils/FondosArmador'
+import { useTranslation } from 'react-i18next'
 
 type ArmadorProps = {
   formData: CardFormData
@@ -23,6 +24,8 @@ type ArmadorProps = {
 }
 
 const Armador = ({ formData, setFormData }: ArmadorProps) => {
+  const { t } = useTranslation(['armador', 'fondos'])
+  const opcionesArmador = getOpcionesArmador(t)
   const [visibleDialog, setVisibleDialog] = useState<string | null>(null)
   const [visibleFondoPreview, setVisibleFondoPreview] = useState(false)
 
@@ -76,7 +79,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
           onChange={(selectedPlantilla) => setFormData(selectedPlantilla)}
         />
         <div className="mt-2 flex flex-row gap-2">
-          <div className="flex-grow-1">
+          <div className="flex-grow-1 mt-4">
             <DropdownFondo
               value={formData.fondo || ''}
               onChange={(nuevoFondo: string) =>
@@ -90,7 +93,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
               type="button"
               icon="pi pi-image"
               onClick={() => setVisibleFondoPreview(true)}
-              tooltip="Ver preview de fondos"
+              tooltip={t('Preview')}
             />
           </div>
         </div>
@@ -106,13 +109,11 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
 
       {/* Dialog de Preview de Fondos */}
       <Dialog
-        header="Seleccionar Fondo"
         visible={visibleFondoPreview}
         onHide={() => setVisibleFondoPreview(false)}
         style={{ width: '80vw', maxWidth: '1200px' }}
         breakpoints={{ '960px': '90vw', '641px': '95vw' }}
         modal
-        draggable={false}
         resizable={false}
         maximizable
       >
@@ -138,7 +139,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                         fondo.value ||
                         '/placeholder-image.jpg'
                       }
-                      alt={fondo.label}
+                      alt={t(`fondos:${fondo.key}`)}
                       className="w-5rem h-8rem object-cover border-round"
                       style={{ aspectRatio: '16/9' }}
                       onError={(e) => {
@@ -153,7 +154,9 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
                     )}
                   </div>
                   <div className="mt-2 text-center">
-                    <span className="text-sm font-medium">{fondo.label}</span>
+                    <span className="text-sm font-medium">
+                      {t(`fondos:${fondo.key}`)}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -163,7 +166,7 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
           {fondos.length === 0 && (
             <div className="text-center p-4">
               <i className="pi pi-image text-6xl text-300"></i>
-              <div className="mt-2 text-500">No hay fondos disponibles</div>
+              <div className="mt-2 text-500">{t('noFondos')}</div>
             </div>
           )}
         </div>
@@ -198,13 +201,12 @@ const Armador = ({ formData, setFormData }: ArmadorProps) => {
           </div>
 
           <Dialog
-            header={`Configurar ${opcion.label}`}
+            header={t('configurar', { label: opcion.label })}
             visible={visibleDialog === opcion.id}
             onHide={() => setVisibleDialog(null)}
             style={{ width: '50vw' }}
             breakpoints={{ '960px': '75vw', '641px': '90vw' }}
             modal
-            draggable={false}
             resizable={false}
           >
             <div className="p-3">

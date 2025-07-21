@@ -1,0 +1,58 @@
+{
+  "base": {
+    "label": "Base",
+    "nombre": "Wally",
+    "cuantos": "2 years old",
+    "cuando": "05/08",
+    "horario": "21:00hs",
+    "direccion": "Street 123"
+  },
+  "campanita": {
+    "label": "Campanita's Birthday",
+    "nombre": "Campanita",
+    "cuantos": "6 years old",
+    "cuando": "Friday, July 12th",
+    "horario": "6pm to 8pm",
+    "direccion": "Any Street 123, Dream City"
+  },
+  "carlitos": {
+    "label": "Carlitos' Birthday",
+    "nombre": "CARLITOS",
+    "cuantos": "7",
+    "cuando": "Friday, August 25th",
+    "horario": "4:30pm to 8:30pm",
+    "direccion": "Any Street 123, Dream City"
+  },
+  "dieguito": {
+    "label": "Dieguito's Birthday",
+    "nombre": "Dieguito",
+    "cuantos": "10",
+    "cuando": "Friday, October 30th",
+    "horario": "6pm",
+    "direccion": "Any Street 123, Dream City"
+  },
+  "margarita": {
+    "label": "Margarita's Birthday",
+    "nombre": "Margarita",
+    "cuantos": "3",
+    "cuando": "Monday, April 2nd",
+    "horario": "12pm",
+    "direccion": "Any Street 123, Dream City"
+  },
+  "neil": {
+    "label": "Neil's Birthday",
+    "nombre": "Neil",
+    "cuantos": "9",
+    "cuando": "08/05",
+    "horario": "2:45pm",
+    "direccion": "Any Street 123, Lunar City"
+  },
+  "tomy": {
+    "label": "Tomy's Halloween",
+    "nombre": "Tomy",
+    "cuantos": "10 years old",
+    "cuando": "08/05",
+    "horario": "3:30pm to 9:00pm",
+    "direccion": "Any Street 123, Lunar City"
+  }
+}

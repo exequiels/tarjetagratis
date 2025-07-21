@@ -1,0 +1,11 @@
+{
+  "titulo_personalizado": "Cumple de {{nombre}}!",
+  "titulo_generico": "¡Estás invitado a mi cumple!",
+  "seo": {
+    "titulo": "¡Te invito a mi cumple! ✨ | TarjetaGratis",
+    "descripcion": "Crea invitaciones digitales gratis y personalizadas para cumpleaños infantiles. ¡Mágicas, rápidas y sin registros!",
+    "keywords": "invitación infantil, tarjeta de cumpleaños, cumpleaños digital, tarjeta gratis"
+  },
+  "crear_tarjeta": "Crear una tarjeta",
+  "crear_tarjeta_url": "https://tarjetagratis.com/"
+}

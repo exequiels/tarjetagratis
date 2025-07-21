@@ -1,0 +1,28 @@
+{
+  "plantillas": "Plantillas",
+  "fondoDialog": {
+    "titulo": "Seleccionar Fondo",
+    "tooltip": "Ver preview de fondos",
+    "noFondos": "No hay fondos disponibles"
+  },
+  "inputLabels": {
+    "nombre": "Nombre",
+    "cuantos": "Edad ",
+    "direccion": "Dirección"
+  },
+  "placeholders": {
+    "nombre": "Escribí el nombre...",
+    "cuantos": "¿Cuántos cumple?",
+    "direccion": "¿Dónde es?"
+  },
+  "nombre": "Nombre",
+  "placeholderNombre": "Escribe el nombre",
+  "cuantos": "Edad",
+  "placeholderCuantos": "Cuántos años cumple?",
+  "cuando": "Fecha",
+  "placeholderCuando": "Cuándo es?",
+  "horario": "Horario",
+  "placeholderHorario": "A qué hora?",
+  "direccion": "Dirección",
+  "placeholderDireccion": "Dónde?"
+}

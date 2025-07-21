@@ -1,0 +1,110 @@
+{
+  "alinear_label": "Alignment:",
+  "alinear_placeholder": "Align",
+  "alinear_options": {
+    "start": "Align Top",
+    "center": "Align Center",
+    "end": "Align Bottom"
+  },
+  "animar_label": "Animation:",
+  "animar_placeholder": "Animate",
+  "animar_filterPlaceholder": "What are you looking for?",
+  "animar_emptyFilterMessage": "No results for this search",
+  "color_label": "Color:",
+  "color_placeholder": "Color",
+  "tono_label": "Tone:",
+  "tono_placeholder": "Tone",
+  "colores": {
+    "gray": "Gray",
+    "red": "Red",
+    "pink": "Pink",
+    "purple": "Purple",
+    "indigo": "Indigo",
+    "blue": "Blue",
+    "cyan": "Cyan",
+    "teal": "Teal",
+    "green": "Green",
+    "yellow": "Yellow",
+    "orange": "Orange"
+  },
+  "cuantosDistribucion": {
+    "label": "Distribution:",
+    "placeholder": "Distribution",
+    "row": "Columns",
+    "column": "Rows"
+  },
+  "nombreOrden": {
+    "label": "Order:",
+    "placeholder": "Order",
+    "flex-row": "First",
+    "flex-row-reverse": "Second"
+  },
+  "decoracion": {
+    "label": "Decoration:",
+    "tipo_placeholder": "Type",
+    "color_placeholder": "Color",
+    "tipos": {
+      "": "Normal",
+      "sombra": "Shadow",
+      "sombraDifusa": "Soft Shadow",
+      "contorno": "Outline",
+      "resaltado": "Highlight"
+    },
+    "colores": {
+      "red": "Red",
+      "blue": "Blue",
+      "green": "Green",
+      "yellow": "Yellow",
+      "black": "Black",
+      "white": "White",
+      "yellowsoft": "Soft Yellow",
+      "mint": "Mint",
+      "pinkpastel": "Pastel Pink",
+      "lightblue": "Light Blue",
+      "peach": "Peach",
+      "beige": "Beige",
+      "pastelyellow": "Pastel Yellow",
+      "lightgreen": "Light Green",
+      "peachorange": "Pastel Orange"
+    }
+  },
+  "fondo": {
+    "label": "Background Image:",
+    "buscar_placeholder": "What are you looking for?",
+    "mensaje_vacio": "No results found"
+  },
+  "fuente": {
+    "label": "Font:",
+    "buscar_placeholder": "What are you looking for?",
+    "mensaje_vacio": "No results found",
+    "placeholder": "Select a font"
+  },
+  "orden": {
+    "label": "Row:",
+    "placeholder": "Order",
+    "opciones": {
+      "superior": "Top",
+      "medio": "Middle",
+      "inferior": "Bottom"
+    }
+  },
+  "plantillas": {
+    "label": "Templates:",
+    "placeholder": "Choose a template",
+    "filterPlaceholder": "What are you looking for?",
+    "emptyMessage": "No results found"
+  },
+  "size": {
+    "label": "Size:",
+    "placeholder": "Size",
+    "compact": "Compact",
+    "normal": "Normal",
+    "large": "Large",
+    "giant": "Giant",
+    "beast": "Beast",
+    "crazy": "Insane",
+    "colossal": "Colossal",
+    "epic": "Epic",
+    "legendary": "Legendary"
+  }
+}

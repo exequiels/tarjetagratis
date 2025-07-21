@@ -1,18 +1,20 @@
 import { Dropdown } from 'primereact/dropdown'
 import type { Props } from '../../types/Props'
+import { useTranslation } from 'react-i18next'
 
 const DropdownAlinear = ({ value, onChange }: Props) => {
+  const { t } = useTranslation('dropdown')
   const alinearOptions = [
-    { label: 'Hacia arriba', value: 'align-items-start' },
-    { label: 'En el centro', value: 'align-items-center' },
-    { label: 'Hacia abajo', value: 'align-items-end' },
+    { label: t('alinear_options.start'), value: 'align-items-start' },
+    { label: t('alinear_options.center'), value: 'align-items-center' },
+    { label: t('alinear_options.end'), value: 'align-items-end' },
   ]
 
   return (
     <div className="flex justify-content-between align-items-center">
       <div>
         <label htmlFor="alinear" className="text-lg">
-          Alineación:{' '}
+          {t('alinear_label')}
         </label>
       </div>
       <Dropdown
@@ -20,7 +22,7 @@ const DropdownAlinear = ({ value, onChange }: Props) => {
         value={value}
         options={alinearOptions}
         onChange={(e) => onChange(e.value)}
-        placeholder="Alinear"
+        placeholder={t('alinear_placeholder')}
         itemTemplate={(option) => <div>{option.label}</div>}
         className="mt-2"
       />

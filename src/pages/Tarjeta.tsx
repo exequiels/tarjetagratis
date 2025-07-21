@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { CardFormData } from '../types/CardFormData'
+import { useTranslation } from 'react-i18next'
 
 const Tarjeta = ({
   fondo,
@@ -38,6 +39,7 @@ const Tarjeta = ({
   horarioAlinear,
   direccionAlinear,
 }: CardFormData) => {
+  const { t } = useTranslation('verTarjeta')
   const [isReady, setIsReady] = useState(false)
   const [isTaped, setIsTaped] = useState(false)
 
@@ -245,11 +247,11 @@ const Tarjeta = ({
         </div>
       </div>
       <a
-        href="https://tarjetagratis.com/"
+        href={t('crear_tarjeta_url')}
         target="_blank"
         className="underline mt-2 text-blue-500"
       >
-        Crear una tarjeta
+        {t('crear_tarjeta')}
       </a>
     </div>
   )

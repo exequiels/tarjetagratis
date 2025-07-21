@@ -1,0 +1,110 @@
+{
+  "alinear_label": "Alineación:",
+  "alinear_placeholder": "Alinear",
+  "alinear_options": {
+    "start": "Hacia arriba",
+    "center": "En el centro",
+    "end": "Hacia abajo"
+  },
+  "animar_label": "Animación:",
+  "animar_placeholder": "Animar",
+  "animar_filterPlaceholder": "¿Qué buscas?",
+  "animar_emptyFilterMessage": "No hay resultados para esa búsqueda",
+  "color_label": "Color:",
+  "color_placeholder": "Color",
+  "tono_label": "Tono:",
+  "tono_placeholder": "Tono",
+  "colores": {
+    "gray": "Gris",
+    "red": "Rojo",
+    "pink": "Rosa",
+    "purple": "Púrpura",
+    "indigo": "Índigo",
+    "blue": "Azul",
+    "cyan": "Cian",
+    "teal": "Verde azulado",
+    "green": "Verde",
+    "yellow": "Amarillo",
+    "orange": "Naranja"
+  },
+  "cuantosDistribucion": {
+    "label": "Distribución:",
+    "placeholder": "Distribución",
+    "row": "Columnas",
+    "column": "Filas"
+  },
+  "nombreOrden": {
+    "label": "Orden:",
+    "placeholder": "Orden",
+    "flex-row": "Primera",
+    "flex-row-reverse": "Segunda"
+  },
+  "decoracion": {
+    "label": "Decoración:",
+    "tipo_placeholder": "Tipo",
+    "color_placeholder": "Color",
+    "tipos": {
+      "": "Normal",
+      "sombra": "Sombra",
+      "sombraDifusa": "Sombra Difusa",
+      "contorno": "Contorno",
+      "resaltado": "Resaltado"
+    },
+    "colores": {
+      "red": "Rojo",
+      "blue": "Azul",
+      "green": "Verde",
+      "yellow": "Amarillo",
+      "black": "Negro",
+      "white": "Blanco",
+      "yellowsoft": "Amarillo Suave",
+      "mint": "Menta",
+      "pinkpastel": "Rosa Pastel",
+      "lightblue": "Celeste Suave",
+      "peach": "Durazno",
+      "beige": "Beige",
+      "pastelyellow": "Amarillo Pastel",
+      "lightgreen": "Verde Claro",
+      "peachorange": "Naranja Pastel"
+    }
+  },
+  "fondo": {
+    "label": "Imagen de Fondo:",
+    "buscar_placeholder": "¿Qué buscas?",
+    "mensaje_vacio": "No hay resultados para esa búsqueda"
+  },
+  "fuente": {
+    "label": "Fuente:",
+    "buscar_placeholder": "¿Qué buscas?",
+    "mensaje_vacio": "No hay resultados para esa búsqueda",
+    "placeholder": "Selecciona una fuente"
+  },
+  "orden": {
+    "label": "Fila:",
+    "placeholder": "Orden",
+    "opciones": {
+      "superior": "Superior",
+      "medio": "Medio",
+      "inferior": "Inferior"
+    }
+  },
+  "plantillas": {
+    "label": "Plantillas:",
+    "placeholder": "Elegí una plantilla",
+    "filterPlaceholder": "¿Qué buscás?",
+    "emptyMessage": "No hay resultados para esa búsqueda"
+  },
+  "size": {
+    "label": "Tamaño:",
+    "placeholder": "Tamaño",
+    "compact": "Compacto",
+    "normal": "Normal",
+    "large": "Grande",
+    "giant": "Gigante",
+    "beast": "Bestial",
+    "crazy": "Demencial",
+    "colossal": "Colosal",
+    "epic": "Épico",
+    "legendary": "Legendaria"
+  }
+}

@@ -1,5 +1,5 @@
 export const animarOptions = [
-  { label: 'Ninguna', value: '' },
+  { label: 'Ninguna', value: 'none' },
   { label: 'Aparecer', value: 'animate__animated animate__fadeIn' },
   // { label: 'Desaparecer', value: 'animate__animated animate__fadeOut' },
   {

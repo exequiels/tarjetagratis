@@ -1,0 +1,28 @@
+{
+  "plantillas": "Templates",
+  "fondoDialog": {
+    "titulo": "Select Background",
+    "tooltip": "Preview backgrounds",
+    "noFondos": "No backgrounds available"
+  },
+  "inputLabels": {
+    "nombre": "Name",
+    "cuantos": "Age",
+    "direccion": "Address"
+  },
+  "placeholders": {
+    "nombre": "Enter the name...",
+    "cuantos": "How old?",
+    "direccion": "Where is it?"
+  },
+  "nombre": "Name",
+  "placeholderNombre": "Enter the name",
+  "cuantos": "Age",
+  "placeholderCuantos": "How old?",
+  "cuando": "Date",
+  "placeholderCuando": "When is it?",
+  "horario": "Time",
+  "placeholderHorario": "What time?",
+  "direccion": "Address",
+  "placeholderDireccion": "Where?"
+}

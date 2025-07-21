@@ -12,22 +12,28 @@ import { InputText } from 'primereact/inputtext'
 import config from '../../config'
 import { validaciones } from '../../utils/Validaciones'
 import SEO from '../SEO'
+import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 
 // const RECAPTCHA_SITE_KEY = config.VITE_RECAPTCHA
 
 const CardLayout = () => {
+  const { t } = useTranslation('cardlayout')
   const toast = useRef<Toast>(null)
+  const isEnglish = i18n.language === 'en'
   const [formData, setFormData] = useState<CardFormData>({
     /* Globales */
     fondo: '/videos/hadas_marco_01_mov.mp4',
     fuente: 'HennyPenny, cursive',
 
     /* Inputs */
-    nombre: 'Campanita',
-    cuantos: '6 años',
-    cuando: 'Viernes 12 de Julio',
-    horario: '18 a 20hs',
-    direccion: 'Calle Cualquiera 123, Ciudad de los Sueños',
+    nombre: isEnglish ? 'Tinkerbell' : 'Campanita',
+    cuantos: isEnglish ? '6 years old' : '6 años',
+    cuando: isEnglish ? 'Friday, July 12th' : 'Viernes 12 de Julio',
+    horario: isEnglish ? '6 to 8 PM' : '18 a 20hs',
+    direccion: isEnglish
+      ? 'Any Street 123, Dream City'
+      : 'Calle Cualquiera 123, Ciudad de los Sueños',
 
     /* Colores */
     nombreColor: 'text-cyan-500',
@@ -77,7 +83,7 @@ const CardLayout = () => {
   const showNotification = (severity: 'error' | 'success', message: string) => {
     toast!.current!.show({
       severity,
-      summary: severity === 'error' ? 'Error' : '¡Listo!',
+      summary: severity === 'error' ? t('error') : t('success'),
       detail: message,
       life: 3000,
     })
@@ -87,28 +93,29 @@ const CardLayout = () => {
     if (!generatedUrl) {
       toast.current?.show({
         severity: 'error',
-        summary: 'Error',
-        detail: 'No hay enlace para copiar',
+        summary: t('error'),
+        detail: t('couldNotCopy'),
         life: 3000,
       })
       return
     }
 
+    const fullUrl = `${config.VITE_URL}${generatedUrl}`
     navigator.clipboard
-      .writeText(generatedUrl)
+      .writeText(fullUrl)
       .then(() => {
         toast.current?.show({
           severity: 'success',
-          summary: 'Alias',
-          detail: 'Enlace copiado',
+          summary: t('alias'),
+          detail: t('linkCopied'),
           life: 3000,
         })
       })
       .catch((err) => {
         toast.current?.show({
           severity: 'error',
-          summary: 'Error',
-          detail: 'No se pudo copiar el enlace',
+          summary: t('error'),
+          detail: t('couldNotCopy'),
           life: 3000,
         })
         console.error('Error al copiar: ', err)
@@ -147,7 +154,7 @@ const CardLayout = () => {
       // const url = await generateCard(payload)
       setGeneratedUrl(url)
       setShowDialog(true)
-      showNotification('success', '¡Tarjeta generada con éxito!')
+      showNotification('success', t('cardGenerated'))
     } catch (error) {
       showNotification('error', (error as Error).message)
     } finally {
@@ -160,10 +167,10 @@ const CardLayout = () => {
   return (
     <>
       <SEO
-        title="TarjetaGratis - Invitaciones digitales personalizadas para cumpleaños"
-        description="Crea tarjetas animadas gratis para cumpleaños infantiles con tu estilo. Elige fondos mágicos, colores, textos y efectos visuales. Compartilas por WhatsApp o Telegram."
-        canonicalUrl="https://tarjetagratis.com/"
-        keywords="tarjetas digitales, cumpleaños, invitaciones infantiles, tarjetas animadas, tarjetas gratis, React"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        canonicalUrl={t('seo.canonicalUrl')}
+        keywords={t('seo.keywords')}
       />
 
       <Toast ref={toast} />
@@ -172,35 +179,14 @@ const CardLayout = () => {
         size="invisible"
         ref={recaptchaRef}
       /> */}
-      <div className="justify-content-center p-4 bg-white">
-        <h1 className="text-xl font-semibold mb-3">
-          Bienvenido a TarjetaGratis
-        </h1>
-        <h2 className="text-lg">
-          Crea invitaciones digitales personalizadas para cumpleaños y eventos
-          especiales de forma fácil y gratuita. Elige una plantilla, edita los
-          datos, genera el código y comparte tu invitación al instante. También
-          puedes personalizarla fácilmente para que sea única.
-        </h2>
+      <div className="justify-content-center p-4 bg-gray-50 border-1 border-dashed border-x-none">
+        <h1 className="text-xl font-semibold mb-3">{t('bienvenida_titulo')}</h1>
+        <h2 className="text-lg">{t('bienvenida_subtitulo')}</h2>
         <p className="text-base mt-4">
-          Esta aplicación está en fase de pruebas. La publiqué online para poder
-          probar su funcionamiento. La información de cada tarjeta se guarda por
-          un máximo de un mes, y se recomienda compartirlas con una anticipación
-          no mayor a ese mes. El uso es totalmente gratuito y sin garantía: no
-          me responsabilizo por pérdidas de datos ni funcionamiento incorrecto.
-          Se utiliza bajo propia responsabilidad.
+          {t('nota_legal')}
           <br />
           <br />
-          Si querés reportar un fallo, proponer ideas o simplemente colaborar,
-          visitá la sección <strong>About</strong> y agregame a&nbsp;
-          <a
-            href="https://www.linkedin.com/in/exequiel-sabatie/"
-            target="_blank"
-            className="underline text-blue-500"
-          >
-            LinkedIn
-          </a>
-          .
+          {t('contacto')} <strong>About</strong>.
         </p>
       </div>
 
@@ -232,12 +218,12 @@ const CardLayout = () => {
               <Button
                 type="submit"
                 className="bg-green-200 elevation"
-                label={loading ? 'Generando...' : 'Generar Tarjeta'}
+                label={loading ? t('generando') : t('generar')}
                 disabled={loading}
               />
             </div>
             <Dialog
-              header="Enlace generado"
+              header={t('dialogo_titulo')}
               visible={showDialog}
               style={{ width: '50vw' }}
               breakpoints={{ '960px': '75vw', '641px': '95vw' }}
@@ -256,8 +242,7 @@ const CardLayout = () => {
 
                   <div className="mt-3">
                     <small className="text-gray-600 text-center block">
-                      Podés utilizar estos botones para compartir o abrir tu
-                      tarjeta:
+                      {t('dialogo_info')}
                     </small>
                   </div>
 
@@ -265,10 +250,10 @@ const CardLayout = () => {
                     <Button
                       icon="pi pi-external-link"
                       onClick={() => window.open(generatedUrl!, '_blank')}
-                      tooltip="Abrir el enlace en una nueva pestaña"
+                      tooltip={t('tooltip_abrir')}
+                      label={t('boton_abrir')}
                       tooltipOptions={{ position: 'top' }}
                       className="p-button-sm p-button-secondary"
-                      label="Abrir"
                       disabled={!generatedUrl}
                       style={{ width: '8rem' }}
                     />
@@ -276,10 +261,10 @@ const CardLayout = () => {
                     <Button
                       icon="pi pi-copy"
                       onClick={copyToClipboard}
-                      tooltip="Copiar enlace al portapapeles"
+                      tooltip={t('tooltip_copiar')}
+                      label={t('boton_copiar')}
                       tooltipOptions={{ position: 'top' }}
                       className="p-button-sm"
-                      label="Copiar"
                       style={{ width: '8rem' }}
                     />
 
@@ -288,14 +273,16 @@ const CardLayout = () => {
                       severity="success"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
+                          `${t('mensaje_invitacion')} ${
+                            config.VITE_URL
+                          }${generatedUrl}`
                         )
                         window.open(`https://wa.me/?text=${text}`, '_blank')
                       }}
-                      tooltip="Compartir en WhatsApp"
+                      tooltip={t('tooltip_whatsapp')}
+                      label={t('boton_whatsapp')}
                       tooltipOptions={{ position: 'top' }}
                       className="p-button-sm p-button-success"
-                      label="WhatsApp"
                       disabled={!generatedUrl}
                       style={{ width: '8rem' }}
                     />
@@ -305,17 +292,19 @@ const CardLayout = () => {
                       severity="info"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `¡Te invito a mi cumpleaños! ${config.VITE_URL}${generatedUrl}`
+                          `${t('mensaje_invitacion')} ${
+                            config.VITE_URL
+                          }${generatedUrl}`
                         )
                         window.open(
                           `https://t.me/share/url?url=${generatedUrl}&text=${text}`,
                           '_blank'
                         )
                       }}
-                      tooltip="Compartir en Telegram"
+                      tooltip={t('tooltip_telegram')}
+                      label={t('boton_telegram')}
                       tooltipOptions={{ position: 'top' }}
                       className="p-button-sm p-button-info"
-                      label="Telegram"
                       disabled={!generatedUrl}
                       style={{ width: '8rem' }}
                     />

@@ -1,78 +1,37 @@
+import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
 
 const About = () => {
+  const { t } = useTranslation('about')
+  // const aportes = t('agradecimiento.usuarios', {
+  //   returnObjects: true,
+  // }) as string[]
   return (
     <>
       <SEO
-        title="Sobre mí - Creador de TarjetaGratis"
-        description="Conocé a Exequiel, desarrollador detrás de TarjetaGratis. Ex-pintor de autos reconvertido en programador que busca crear, aprender y conectar en comunidad."
+        title={t('seo.title')}
+        description={t('seo.description')}
         canonicalUrl="https://tarjetagratis.com/about"
-        keywords="sobre mí, desarrollador web, React, historia, comunidad, tarjetas digitales"
+        keywords={t('seo.keywords')}
       />
       <div className="col-12 flex justify-content-center">
-        <div className="col-12 md:col-4 border-1 border-dashed border-round-lg p-3">
-          <h1 className="text-4xl font-bold">Hola, soy Exequiel</h1>
-
-          <p className="text-lg mt-4">
-            Fui pintor de autos hasta que, a los 37 años, decidí reinventarme
-            como desarrollador. Elijo creer que todo suma, incluso los proyectos
-            que nadie ve o que no generan impacto aparente. Para mí, significan
-            calma y el disfrute de recorrer un camino largo, lleno de
-            aprendizajes, donde todavía queda mucha aventura por descubrir. Si
-            sentís afinidad con esto, me encantaría conocerte.
-          </p>
-
-          <ul className="list-disc text-left px-5 space-y-2 text-base mt-4">
-            <li>
-              <strong>Mentores</strong> que puedan acompañarme con feedback
-              honesto — quiero profundizar en la nube y explorar más sobre
-              inteligencia artificial.
-            </li>
-            <li>
-              Espacios donde la creatividad rompa estructuras y normas
-              predecibles
-            </li>
-            <li>Ideas locas con propósito: siempre bienvenidas</li>
-            <li>Crecimiento genuino, fruto de la colaboración</li>
-            <li>Conexiones humanas por encima de métricas o facturación</li>
-          </ul>
-
-          <p className="text-base mt-4">
-            Si tenés una idea, un proyecto, o simplemente querés charlar sobre
-            tecnología o desarrollo, escribime por&nbsp;
-            <a
-              href="https://www.linkedin.com/in/exequiel-sabatie/"
-              target="_blank"
-              className="underline text-blue-500"
-            >
-              LinkedIn
-            </a>
-            .
-          </p>
-
-          <p className="text-lg mt-5">
-            Hoy, con 41 años, lancé <strong>tarjetagratis.com</strong>: un
-            proyecto hecho con React y Context API, pensado como una excusa para
-            seguir aprendiendo, mientras ofrezco a madres y padres una forma
-            simple y mágica de crear invitaciones personalizadas para sus hijos.
-          </p>
-
-          <p className="text-lg mt-5">
-            Nada de esto sería posible sin el apoyo incondicional de mi familia.
-            Gracias por acompañarme con paciencia y amor en cada línea de
-            código.
-          </p>
+        <div className="col-12 md:col-4 border-1 border-dashed border-round-lg p-3 bg-gray-50">
+          <h1 className="text-4xl font-bold">{t('titulo')}</h1>
+          <p className="text-lg mt-3">{t('presentacion')}</p>
+          <p className="text-lg mt-3">{t('lanzamiento')}</p>
+          <p className="text-lg mt-3">{t('agradecimiento.familia')}</p>
+          <p className="text-lg mt-3">{t('agradecimiento.parrafo')}</p>
+          <p className="text-lg mt-3">{t('lista.ideas')}</p>
 
           <h2 className="text-2xl font-semibold mt-6">
-            Tecnologías utilizadas
+            {t('tecnologias_titulo')}
           </h2>
-          <ul className="list-disc text-left px-5 space-y-2 text-base mt-2">
+          <ul className="list-disc text-left px-5 space-y-2 text-lg mt-2">
             <li>
-              <strong>React, TypeScript y Laravel</strong>
+              <strong>{t('tecnologias.stack')}</strong>
             </li>
             <li>
-              <strong>PrimeReact</strong>: biblioteca de componentes moderna y
-              accesible.&nbsp;
+              {t('tecnologias.primereact')}&nbsp;
               <a
                 href="https://primereact.org/"
                 target="_blank"
@@ -83,8 +42,7 @@ const About = () => {
               </a>
             </li>
             <li>
-              <strong>Animate.css</strong>: animaciones suaves para texto y
-              elementos.&nbsp;
+              {t('tecnologias.animate')}&nbsp;
               <a
                 href="https://animate.style/"
                 target="_blank"
@@ -95,20 +53,18 @@ const About = () => {
               </a>
             </li>
             <li>
-              <strong>Efecto 3D de la tarjeta</strong>: inspirado en el video
-              de&nbsp;
+              {t('tecnologias.hover_effect')}&nbsp;
               <a
                 href="https://www.youtube.com/watch?v=LRiORDWOoXI&t=8s"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline text-blue-500"
               >
-                WebDev Diaries - Bird Hover Effect
+                Video
               </a>
-              .
             </li>
             <li>
-              <strong>Fuentes</strong>: todas de&nbsp;
+              {t('tecnologias.fuentes')}&nbsp;
               <a
                 href="https://fonts.google.com"
                 target="_blank"
@@ -119,7 +75,7 @@ const About = () => {
               </a>
             </li>
             <li>
-              <strong>Imágenes y fondos</strong>: generados con&nbsp;
+              {t('tecnologias.imagenes')}&nbsp;
               <a
                 href="https://aistudio.google.com/"
                 target="_blank"
@@ -131,9 +87,24 @@ const About = () => {
             </li>
           </ul>
 
-          <p className="text-sm mt-5 text-gray-500">
-            Todos los archivos de licencia están incluidos dentro del proyecto.
+          {/* <h4 className="text-lg mt-3">{t('agradecimiento.lista_titulo')}</h4>
+          <ul className="text-lg">
+            {aportes.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul> */}
+
+          <p className="text-lg mt-3">
+            {t('invitacion_contacto')}&nbsp;
+            <a
+              href="https://x.com/ExeRebootLife"
+              target="_blank"
+              className="underline text-blue-500"
+            >
+              Twitter
+            </a>
           </p>
+          <p className="text-sm mt-3 text-gray-500">{t('nota_legal')}</p>
         </div>
       </div>
     </>
