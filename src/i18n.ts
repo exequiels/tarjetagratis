@@ -17,6 +17,8 @@ import plantillasES from './traducciones/es/plantillas.json'
 import plantillasEN from './traducciones/en/plantillas.json'
 import fondosEN from './traducciones/en/fondos.json'
 import fondosES from './traducciones/es/fondos.json'
+import faqEN from './traducciones/en/faq.json'
+import faqES from './traducciones/es/faq.json'
 
 const getInitialLanguage = () => {
   const browserLang = navigator.language || navigator.languages?.[0] || 'es'
@@ -49,6 +51,7 @@ i18n.use(initReactI18next).init({
       validaciones: validacionesEN,
       plantillas: plantillasEN,
       fondos: fondosEN,
+      faq: faqEN,
     },
     es: {
       cardlayout: cardlayoutES,
@@ -59,6 +62,7 @@ i18n.use(initReactI18next).init({
       validaciones: validacionesES,
       plantillas: plantillasES,
       fondos: fondosES,
+      faq: faqES,
     },
   },
   fallbackLng: 'es',

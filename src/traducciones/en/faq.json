@@ -1,0 +1,28 @@
+{
+  "seo": {
+    "title": "Create free digital invitations for birthdays | TarjetaGratis",
+    "description": "Design animated cards for kids' birthdays and share them on WhatsApp. No sign-up, easy and 100% free.",
+    "keywords": "free birthday cards, digital invitations, kids birthdays, animated cards WhatsApp",
+    "canonicalUrl": "https://tarjetagratis.com/"
+  },
+  "faq": {
+    "titulo": "Frequently Asked Questions",
+    "pregunta1": "Do I need to register to use TarjetaGratis?",
+    "respuesta1": "No, TarjetaGratis is 100% free and does not require registration. Just create your card and share it instantly.",
+
+    "pregunta2": "Can I use it from my mobile phone?",
+    "respuesta2": "Yes, it is designed to work on any device: mobile, tablet, or PC.",
+
+    "pregunta3": "How long is my card stored?",
+    "respuesta3": "Cards are stored for 30 days. After that, they are automatically deleted.",
+
+    "pregunta4": "How do I share it?",
+    "respuesta4": "You can copy the generated link and send it via WhatsApp, Telegram, or social networks.",
+
+    "pregunta5": "Does it cost anything to use TarjetaGratis?",
+    "respuesta5": "No, the service is completely free with no hidden charges.",
+
+    "pregunta6": "Can I customize the card?",
+    "respuesta6": "Yes, you can change text, colors, background, and visual effects to make it unique."
+  }
+}

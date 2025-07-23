@@ -171,6 +171,21 @@ const CardLayout = () => {
         description={t('seo.description')}
         canonicalUrl={t('seo.canonicalUrl')}
         keywords={t('seo.keywords')}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'TarjetaGratis',
+            url: 'https://tarjetagratis.com/',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'TarjetaGratis',
+            url: 'https://tarjetagratis.com/',
+            logo: 'https://tarjetagratis.com/logo.png',
+          },
+        ]}
       />
 
       <Toast ref={toast} />
