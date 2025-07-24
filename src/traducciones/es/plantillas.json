@@ -39,6 +39,14 @@
     "horario": "12pm",
     "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
   },
+  "miguel": {
+    "label": "Cumple de Miguel",
+    "nombre": "Miguel",
+    "cuantos": "10 años",
+    "cuando": "27 de Octubre",
+    "horario": "21:00hs",
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
+  },
   "neil": {
     "label": "Cumple de Neil",
     "nombre": "Neil",
@@ -53,6 +61,6 @@
     "cuantos": "10 Años",
     "cuando": "05/08",
     "horario": "15:30hs a 21:00hs",
-    "direccion": "Calle Cualquiera 123, Ciudad Lunar"
+    "direccion": "Calle Cualquiera 123, Ciudad de los Sueños"
   }
 }
