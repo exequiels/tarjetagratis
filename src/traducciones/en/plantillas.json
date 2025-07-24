@@ -39,6 +39,14 @@
     "horario": "12pm",
     "direccion": "Any Street 123, Dream City"
   },
+  "miguel": {
+    "label": "Miguel's Birthday",
+    "nombre": "Miguel",
+    "cuantos": "10 years",
+    "cuando": "October 27th",
+    "horario": "21:00hs",
+    "direccion": "Any Street 123, Dream City"
+  },
   "neil": {
     "label": "Neil's Birthday",
     "nombre": "Neil",

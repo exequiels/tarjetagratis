@@ -544,4 +544,29 @@ export const fondos = [
     value: '/images/unicornios_05.png',
     thumbnail: '/images/thumbnail/unicornios_05.png',
   },
+  {
+    key: 'viva_mexico_01',
+    value: '/images/viva_mexico_01.png',
+    thumbnail: '/images/thumbnail/viva_mexico_01.png',
+  },
+  {
+    key: 'viva_mexico_02',
+    value: '/images/viva_mexico_02.png',
+    thumbnail: '/images/thumbnail/viva_mexico_02.png',
+  },
+  {
+    key: 'viva_mexico_03',
+    value: '/images/viva_mexico_03.png',
+    thumbnail: '/images/thumbnail/viva_mexico_03.png',
+  },
+  {
+    key: 'viva_mexico_04',
+    value: '/images/viva_mexico_04.png',
+    thumbnail: '/images/thumbnail/viva_mexico_04.png',
+  },
+  {
+    key: 'viva_mexico_05',
+    value: '/images/viva_mexico_05.png',
+    thumbnail: '/images/thumbnail/viva_mexico_05.png',
+  },
 ]

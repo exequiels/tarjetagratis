@@ -46,7 +46,8 @@ export const getPlantillas = (t: TFunction) => [
 
       /* Orden */
       nombreOrden: 'flex-order-0',
-      cuantosOrden: 'flex-row-reverse',
+      cuantosOrden: 'flex-row',
+      cuantosDistribucion: 'row',
 
       /* Alineaciones */
       nombreAlinear: 'align-items-end',
@@ -101,6 +102,7 @@ export const getPlantillas = (t: TFunction) => [
       /* Orden */
       nombreOrden: 'flex-order-0',
       cuantosOrden: 'flex-row-reverse',
+      cuantosDistribucion: 'column',
 
       /* Alineaciones */
       nombreAlinear: 'align-items-end',
@@ -265,7 +267,7 @@ export const getPlantillas = (t: TFunction) => [
       /* Orden */
       nombreOrden: 'flex-order-0',
       cuantosOrden: 'flex-row',
-      cuantosDistribucion: 'column',
+      cuantosDistribucion: 'row',
 
       /* Alineaciones */
       nombreAlinear: 'align-items-end',
@@ -273,6 +275,61 @@ export const getPlantillas = (t: TFunction) => [
       cuandoAlinear: 'align-items-end',
       horarioAlinear: 'align-items-start',
       direccionAlinear: 'align-items-center',
+    } as CardFormData,
+  },
+  {
+    label: t('miguel.label', { ns: 'plantillas' }),
+    value: {
+      /* Globales */
+      fondo: '/images/viva_mexico_01.png',
+      fuente: 'Pacifico, cursive',
+
+      /* Inputs */
+      nombre: t('miguel.nombre', { ns: 'plantillas' }),
+      cuantos: t('miguel.cuantos', { ns: 'plantillas' }),
+      cuando: t('miguel.cuando', { ns: 'plantillas' }),
+      horario: t('miguel.horario', { ns: 'plantillas' }),
+      direccion: t('miguel.direccion', { ns: 'plantillas' }),
+
+      /* Colores */
+      nombreColor: 'text-red-400',
+      cuantosColor: 'text-red-400',
+      cuandoColor: 'text-red-400',
+      horarioColor: 'text-red-400',
+      direccionColor: 'text-red-400',
+
+      /* Decoraciones */
+      nombreDecoration: 'decoration-sombraDifusa-black',
+      cuantosDecoration: 'decoration-sombraDifusa-black',
+      cuandoDecoration: 'decoration-sombraDifusa-black',
+      horarioDecoration: 'decoration-sombraDifusa-black',
+      direccionDecoration: 'decoration-sombraDifusa-black',
+
+      /* Tamaños */
+      nombreSize: 'text-7xl',
+      cuantosSize: 'text-7xl',
+      cuandoSize: 'text-6xl',
+      horarioSize: 'text-4xl',
+      direccionSize: 'text-2xl',
+
+      /* Animaciones */
+      nombreAnimar: '',
+      cuantosAnimar: '',
+      cuandoAnimar: '',
+      horarioAnimar: '',
+      direccionAnimar: '',
+
+      /* Orden */
+      nombreOrden: 'flex-order-0',
+      cuantosOrden: 'flex-row',
+      cuantosDistribucion: 'row',
+
+      /* Alineaciones */
+      nombreAlinear: 'align-items-end',
+      cuantosAlinear: 'align-items-center',
+      cuandoAlinear: 'align-items-end',
+      horarioAlinear: 'align-items-start',
+      direccionAlinear: 'align-items-start',
     } as CardFormData,
   },
   {
