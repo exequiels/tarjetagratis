@@ -46,7 +46,9 @@ const VerTarjeta = () => {
       <SEO
         title={t('seo.titulo')}
         description={t('seo.descripcion')}
-        canonicalUrl="https://tarjetagratis.com/tarjeta"
+        canonicalUrl={`https://tarjetagratis.com/tarjeta/${encodeURIComponent(
+          code || ''
+        )}`}
         keywords={t('seo.keywords')}
       />
 
