@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

@@ -20,23 +20,31 @@ import fondosES from './traducciones/es/fondos.json'
 import faqEN from './traducciones/en/faq.json'
 import faqES from './traducciones/es/faq.json'
 
+// const getInitialLanguage = () => {
+//   const browserLang = navigator.language || navigator.languages?.[0] || 'es'
+
+//   if (browserLang.startsWith('en')) {
+//     return 'en'
+//   }
+
+//   const hostname = window.location.hostname
+//   if (hostname.includes('magickidscards.com')) {
+//     return 'en'
+//   }
+
+//   if (hostname.includes('tarjetagratis.com')) {
+//     return 'es'
+//   }
+
+//   return 'es'
+// }
 const getInitialLanguage = () => {
-  const browserLang = navigator.language || navigator.languages?.[0] || 'es'
-
-  if (browserLang.startsWith('en')) {
-    return 'en'
-  }
-
-  const hostname = window.location.hostname
-  if (hostname.includes('magickidscards.com')) {
-    return 'en'
-  }
-
-  if (hostname.includes('tarjetagratis.com')) {
-    return 'es'
-  }
-
-  return 'es'
+  const lang = (
+    navigator.language ||
+    navigator.languages?.[0] ||
+    'es'
+  ).toLowerCase()
+  return lang.startsWith('en') ? 'en' : 'es'
 }
 
 i18n.use(initReactI18next).init({
