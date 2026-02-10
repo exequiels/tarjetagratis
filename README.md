@@ -24,3 +24,13 @@ npm run dev
 ```
 
 You need to set up the backend for all of this to generate the card. However, you can see a full preview of the card in the React part until you click the "Generate Card" button.
+
+<!-- PORTFOLIO_DATA_START
+**Stack:** React, TypeScript, PrimeFlex, PrimeReact, Laravel APIs.
+**Description:** Tarjetagratis – a birthday card creation tool.
+**What I've learned and tested:**
+- Client-side React is not SEO-friendly by default, and I struggled to fully understand how SEO works in this setup.
+- I implemented i18n for translations, but it became messy and hard to maintain.
+- At the time, I used AI with less experience than I have today; it’s easy to get lost in the hype and implement things without fully understanding them.
+- This project helped me shift my mindset: today I use AI primarily as a learning and reasoning tool, not just for code generation.
+PORTFOLIO_DATA_END -->
