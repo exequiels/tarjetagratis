@@ -1,16 +1,32 @@
-**React Birthday Card Builder, with no registration needed.**
+# React Birthday Card Builder, with no registration needed.
 
-I choose to believe that everything adds up, that I make a difference—even the projects that don't seem to have an apparent impact. To me, they're paths already walked or yet to be walked.
+## Tarjetagratis – React Birthday Card Builder
 
-Today, at 41 years old, I launched tarjetagratis.com: a project built with React and Context API, conceived as an excuse to keep learning while offering an alternative to what's already out there.
+This project started as a simple personal need: I wanted to create a birthday card for my son.
+Instead of using existing tools, I built a small card builder as an excuse to keep learning and experimenting.
 
-Time simply flies. Thank you to my family and all the good vibes people.
+No registration required — create, customize, generate, and share a card in just a few clicks.
 
-I needed a card for my son's birthday, so I made a builder. You don't need to register; you just edit and generate a card with a short code, share it, and that's all. It takes 2 or 3 clicks. Or, you can deeply customize cards.
+**Key focus:** simplicity, fast UX, and minimal backend requirements.
+
+### Features
+
+- Create and customize birthday cards
+- No user registration required
+- Shareable short-code based cards
+- Live preview before generation
+- Optional deep customization
 
 [Visit tarjetagratis.com](https://tarjetagratis.com)
 
-Technologies Used
+### What I Learned
+
+- Client-side React alone is not SEO-friendly; this project helped me understand when CSR is enough and when it isn’t.
+- Early i18n implementations without a clear structure can become hard to maintain.
+- Overusing AI tools without solid fundamentals leads to shallow understanding; today I use AI mainly for reasoning, validation, and learning.
+- For many products, a simple monolithic backend is more effective than prematurely adopting microservices.
+
+**Technologies Used**
 React, TypeScript, and Laravel
 PrimeReact: component library.
 Animate.css: text animations. Animate.css
@@ -18,19 +34,24 @@ Card 3D effect: inspired by the WebDev Diaries video - Bird Hover Effect. Video
 Fonts: all from Google Fonts Google Fonts
 Images and backgrounds: generated with Google AI Studio Google AI Studio
 
-```
-npm run install
+### Local Setup
+
+```bash
+npm install
 npm run dev
+
 ```
 
-You need to set up the backend for all of this to generate the card. However, you can see a full preview of the card in the React part until you click the "Generate Card" button.
+The backend is included in this repository and must be set up in order to generate the cards.
+Once configured, you can preview the full card in the React application. The backend is only required when clicking the "Generate Card" button.
 
 <!-- PORTFOLIO_DATA_START
 **Stack:** React, TypeScript, PrimeFlex, PrimeReact, Laravel APIs.
 **Description:** Tarjetagratis – a birthday card creation tool.
 **What I've learned and tested:**
-- Client-side React is not SEO-friendly by default, and I struggled to fully understand how SEO works in this setup.
-- I implemented i18n for translations, but it became messy and hard to maintain.
-- At the time, I used AI with less experience than I have today; it’s easy to get lost in the hype and implement things without fully understanding them.
+- Client-side React is not SEO-friendly by default, and this project helped me better understand when CSR is sufficient and when it isn’t.
+- Early i18n implementations without a clear structure can become hard to maintain over time.
+- At the time, I used AI tools with less experience; it’s easy to follow the hype and implement solutions without fully understanding them.
 - This project helped me shift my mindset: today I use AI primarily as a learning and reasoning tool, not just for code generation.
+- For many products, a simple monolithic backend is more effective and maintainable than prematurely adopting a microservices architecture.
 PORTFOLIO_DATA_END -->
